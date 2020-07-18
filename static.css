@@ -2261,6 +2261,1616 @@ a.tc-tiddlylink:hover {
 	fill: #ffffff;
 }
 
+.tbl-style-dark {  
+  text-shadow: none;
+  width:100%;
+  overflow:visible;
+}.tbl-style-dark > table{  
+  text-shadow: none;
+  border-collapse: collapse;
+  caption-side: top;
+  table-layout:auto;
+  width:100%;
+  margin: 0 0 0 0;
+  border-top: 1px solid #999999;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  border-left: 1px solid #999999;
+}.tbl-style-dark > table > caption {
+  margin: 0 0 0 0;
+  padding: 2px 7px 2px 7px;
+  text-shadow: none;
+  color:#FFFFFF;
+  background-color:#3D3D3D;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  border-top: 1px solid #999999;
+  border-right: 1px solid #999999;
+  border-bottom: 0px solid #999999;
+  border-left: 1px solid #999999;
+  text-align:center;
+}.tbl-style-dark > table > caption *,
+.tbl-style-dark > table > caption > div *{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-shadow: none;
+  color:#FFFFFF;
+  fill:#FFFFFF;
+}.tbl-style-dark > table > caption > div > .tbl-hidden-edit{
+  background: transparent !important;
+  border: none;
+  color:#FFFFFF!important;
+}.tbl-style-dark > table > caption > div > .tbl-hidden-edit-wide{
+  width: 100%;
+  background: transparent !important;
+  border: none;
+  color:#FFFFFF!important;
+}.tbl-style-dark > table > thead {
+  text-shadow: none;
+}.tbl-style-dark > table > thead > tr {
+  text-shadow: none;
+  background: #595959;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-dark > table > thead > tr > th {
+  text-shadow: none;
+  color:#FFFFFF;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 2px 7px 2px 7px;
+  border-top: 1px solid #999999;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  border-left: 1px solid #999999;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  white-space: nowrap;
+}.tbl-style-dark > table > thead> tr > th p, 
+.tbl-style-dark > table > thead> tr > th a,
+.tbl-style-dark > table > thead> tr > th button,
+.tbl-style-dark > table > thead> tr > th .tc-tiddlylink {
+  text-shadow: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color:#FFFFFF;
+  font-weight: bold;
+}.tbl-style-dark > table > thead> tr > th > button > svg,
+.tbl-style-dark > table > thead> tr > th > span > button > svg {
+  text-shadow: none;
+  fill:#FFFFFF;
+  height:15px;
+  padding:0 0 2px 0;
+}.tbl-style-dark > table > thead> tr > th > button.tbl-sort-svg > svg {
+  text-shadow: none;
+  fill:#FFFFFF;
+  height:10px;
+  padding:0 0 2px 0;
+}.tbl-style-dark > table > tfoot {
+  text-shadow: none;
+}.tbl-style-dark > table > tfoot > tr {
+  text-shadow: none;
+  background: #595959;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-dark > table > tfoot > tr > th {
+  text-shadow: none;
+  color:#FFFFFF;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 2px 7px 2px 7px;
+  border-top: 1px solid #999999;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  border-left: 1px solid #999999;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  white-space: nowrap;
+}.tbl-style-dark > table > tfoot> tr > th p, 
+.tbl-style-dark > table > tfoot> tr > th a,
+.tbl-style-dark > table > tfoot> tr > th button,
+.tbl-style-dark > table > tfoot> tr > th .tc-tiddlylink {
+  text-shadow: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color:#FFFFFF;
+  font-weight: bold;
+}.tbl-style-dark > table > tfoot> tr > th > button > svg,
+.tbl-style-dark > table > tfoot> tr > th > span > button > svg {
+  text-shadow: none;
+  fill:#FFFFFF;
+  height:15px;
+  padding:0 0 2px 0;
+}.tbl-style-dark > table > tfoot> tr > th > button.tbl-sort-svg > svg {
+  text-shadow: none;
+  fill:#FFFFFF;
+  height:10px;
+  padding:0 0 2px 0;
+}.tbl-style-dark > table > tbody {
+  text-shadow: none;
+}.tbl-style-dark > table > tbody > tr {
+  text-shadow: none;
+  background: #686868;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-dark > table > tbody > tr > td {
+  text-shadow: none;
+  color:#FFFFFF;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 1px 7px 1px 7px;
+  border-top: 1px solid #999999;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  border-left: 1px solid #999999;
+  text-align: left;
+}.tbl-style-dark > table > tbody > tr > td.tbl-tag-template > div > div.tc-tags-wrapper {
+margin:0 0 0 0;
+}.tbl-style-dark > table > tbody> tr > td > p > svg{
+  vertical-align: middle;
+  fill:#FFFFFF;
+}.tbl-style-dark > table > tbody> tr > td > a > sup{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}.tbl-style-dark > table > tbody> tr > td > p,
+.tbl-style-dark > table > tbody> tr > td > p > a, 
+.tbl-style-dark > table > tbody> tr > td > a,
+.tbl-style-dark > table > tbody> tr > td > a > a,
+.tbl-style-dark > table > tbody> tr > td > button, 
+.tbl-style-dark > table > tbody> tr > td > .tc-tiddlylink,
+.tbl-style-dark > table > tbody> tr > td > a > a.tc-tiddlylink{
+  text-shadow: none;
+  margin:0 0 0 0;
+  color:#FFFFFF;
+  background-color:transparent;
+  font-weight: normal;
+}.tbl-style-dark > table > tbody> tr > td > button > svg {
+  text-shadow: none;
+  fill:#FFFFFF;
+  height:15px;
+  padding:0 0 2px 0;
+  align:center;
+}.tbl-style-dark > table > tbody > tr.tbl-record-row:nth-child(odd) {
+  background-color: #7A7A7A;
+}.tbl-style-dark > table > tbody > tr.tbl-record-row:nth-child(even) {
+  background-color: #737373;
+}.tbl-style-dark > table > tbody > tr.tbl-record-row:hover {
+  background-color: #46486B;
+}.tbl-style-dark > table > caption a:hover,
+.tbl-style-dark > table > caption > .tc-tiddlylink:hover {
+  color:#FFFEE2;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-dark > table > thead > tr > th a:hover, 
+.tbl-style-dark > table > thead > tr > th button:hover,
+.tbl-style-dark > table > thead> tr > th > .tc-tiddlylink:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}.tbl-style-dark > table > tfoot > tr > th a:hover,
+.tbl-style-dark > table > tfoot > tr > th button:hover,
+.tbl-style-dark > table > tfoot> tr > th > .tc-tiddlylink:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}.tbl-style-dark > table > tbody > tr > td a:hover,
+.tbl-style-dark > table > tbody > tr > td > a > a:hover,
+.tbl-style-dark > table > tbody > tr > td > .tc-tiddlylink:hover, 
+.tbl-style-dark > table > tbody > tr > td > a > .tc-tiddlylink:hover{
+  color:#FFFEE2;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-dark > div a:hover,
+.tbl-style-dark > div .tc-tiddlylink:hover {
+  color: #FFFEE2;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-dark > table > tbody> tr > .tbl-inpt-edit > input[type="text"],
+.tbl-style-dark > table > tbody> tr > .tbl-inpt-edit > textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+}.tbl-style-dark > table > tbody > tr > .tbl-inpt-check > span > button > label > input[type="checkbox"],
+.tbl-style-dark > table > thead > tr > .tbl-inpt-check > span > button > label > input[type="checkbox"]{
+  vertical-align: middle;
+  margin: 0px 0px 2px 0px;
+}.tbl-style-dark > table > tbody> tr > td > select {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+}.tbl-style-dark > table > tbody> tr > td > select > option {
+  background: #686868;
+  border: none;
+  color: #FFFFFF;
+}.tbl-style-dark > table > tbody> tr > td.tbl-expand-pad,
+.tbl-style-dark > table > tbody> tr > td.tbl-expand-pad > p > pre {
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  padding: 5px 8px 5px 8px;
+}.tbl-style-dark > table > tbody> tr > td.tbl-expand-nopad,
+.tbl-style-dark > table > tbody> tr > td.tbl-expand-nopad > p,
+.tbl-style-dark > table > tbody> tr > td.tbl-expand-nopad > p > pre {
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}.tbl-style-dark > table > tbody> tr > td > p > .tbl-inpt-edit {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+}.tbl-style-dark > table > tbody> tr > td > canvas {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: ;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}.tbl-style-dark > div > div.tbl-page-footer,
+.tbl-style-dark > div > span > div.tbl-page-refresh {
+  text-align: center;
+  margin: 0 0 0 0;
+  padding: 2px 7px 2px 7px;
+  color:#FFFFFF;
+  background-color:#3D3D3D;
+  font-size: 15px;
+  line-height: 22px;
+  border-top: 0px solid #999999;
+  border-right: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  border-left: 1px solid #999999;
+}.tbl-style-dark > div > span > div.tbl-page-refresh > button,
+.tbl-style-dark > div > span > div.tbl-page-refresh > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  color:#FFFFFF;
+  font-weight: normal;
+  font-size: 15px;
+}.tbl-style-dark > div > div.tbl-page-footer > div.tbl-page-prev > button,
+.tbl-style-dark > div > div.tbl-page-footer > div.tbl-page-prev > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 2px 0 0 0;
+  color:#FFFFFF;
+  font-weight: normal;
+  font-size: 15px;
+  float:left;
+}.tbl-style-dark > div > div.tbl-page-footer > div.tbl-page-next > button,
+.tbl-style-dark > div > div.tbl-page-footer > div.tbl-page-next > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 2px 0 0 0;
+  color:#FFFFFF;
+  font-weight: normal;
+  font-size: 15px;
+  float:right;
+}.tbl-style-dark > div > div.tbl-page-footer > select {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+}.tbl-style-dark > div > div.tbl-page-footer > div.tbl-page-prev > button > svg,
+.tbl-style-dark > div > div.tbl-page-footer > div.tbl-page-next > button > svg {
+  text-shadow: none;
+  fill:#FFFFFF;
+  padding:0 0 3px 0;
+}.tbl-delete-confirm {
+  color: white;
+  background-color:red;
+  padding: 8px;
+  margin: 0px;
+  text-align:center;
+}.tbl-delete-confirm > button {
+  color: white;
+  fill: white;
+}.tbl-edit-menu textarea{
+  width:100%;
+}
+.tbl-edit-wide{
+  width:94%;
+}
+
+.tbl-style-invisible {  
+  text-shadow: none;
+  width:100%;
+  overflow:visible;
+}.tbl-style-invisible > table{  
+  text-shadow: none;
+  border-collapse: collapse;
+  caption-side: top;
+  table-layout:auto;
+  width:100%;
+  margin: 0 0 0 0;
+  border-top: 0px solid #000000;
+  border-right: 0px solid #000000;
+  border-bottom: 0px solid #000000;
+  border-left: 0px solid #000000;
+}.tbl-style-invisible > table > caption {
+  margin: 0 0 0 0;
+  padding: 2px 7px 2px 7px;
+  text-shadow: none;
+  color:#000000;
+  background-color:transparent;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  border-top: 0px solid #000000;
+  border-right: 0px solid #000000;
+  border-bottom: 0px solid #000000;
+  border-left: 0px solid #000000;
+  text-align:center;
+}.tbl-style-invisible > table > caption *,
+.tbl-style-invisible > table > caption > div *{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-shadow: none;
+  color:#000000;
+  fill:#000000;
+}.tbl-style-invisible > table > caption > div > .tbl-hidden-edit{
+  background: transparent !important;
+  border: none;
+  color:#000000!important;
+}.tbl-style-invisible > table > caption > div > .tbl-hidden-edit-wide{
+  width: 100%;
+  background: transparent !important;
+  border: none;
+  color:#000000!important;
+}.tbl-style-invisible > table > thead {
+  text-shadow: none;
+}.tbl-style-invisible > table > thead > tr {
+  text-shadow: none;
+  background: transparent;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-invisible > table > thead > tr > th {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 2px 7px 2px 7px;
+  border-top: 0px solid #000000;
+  border-right: 0px solid #000000;
+  border-bottom: 0px solid #000000;
+  border-left: 0px solid #000000;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  white-space: nowrap;
+}.tbl-style-invisible > table > thead> tr > th p, 
+.tbl-style-invisible > table > thead> tr > th a,
+.tbl-style-invisible > table > thead> tr > th button,
+.tbl-style-invisible > table > thead> tr > th .tc-tiddlylink {
+  text-shadow: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color:#000000;
+  font-weight: bold;
+}.tbl-style-invisible > table > thead> tr > th > button > svg,
+.tbl-style-invisible > table > thead> tr > th > span > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:15px;
+  padding:0 0 2px 0;
+}.tbl-style-invisible > table > thead> tr > th > button.tbl-sort-svg > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:10px;
+  padding:0 0 2px 0;
+}.tbl-style-invisible > table > tfoot {
+  text-shadow: none;
+}.tbl-style-invisible > table > tfoot > tr {
+  text-shadow: none;
+  background: transparent;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-invisible > table > tfoot > tr > th {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 2px 7px 2px 7px;
+  border-top: 0px solid #000000;
+  border-right: 0px solid #000000;
+  border-bottom: 0px solid #000000;
+  border-left: 0px solid #000000;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  white-space: nowrap;
+}.tbl-style-invisible > table > tfoot> tr > th p, 
+.tbl-style-invisible > table > tfoot> tr > th a,
+.tbl-style-invisible > table > tfoot> tr > th button,
+.tbl-style-invisible > table > tfoot> tr > th .tc-tiddlylink {
+  text-shadow: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color:#000000;
+  font-weight: bold;
+}.tbl-style-invisible > table > tfoot> tr > th > button > svg,
+.tbl-style-invisible > table > tfoot> tr > th > span > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:15px;
+  padding:0 0 2px 0;
+}.tbl-style-invisible > table > tfoot> tr > th > button.tbl-sort-svg > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:10px;
+  padding:0 0 2px 0;
+}.tbl-style-invisible > table > tbody {
+  text-shadow: none;
+}.tbl-style-invisible > table > tbody > tr {
+  text-shadow: none;
+  background: transparent;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-invisible > table > tbody > tr > td {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 1px 7px 1px 7px;
+  border-top: 0px solid #000000;
+  border-right: 0px solid #000000;
+  border-bottom: 0px solid #000000;
+  border-left: 0px solid #000000;
+  text-align: left;
+}.tbl-style-invisible > table > tbody > tr > td.tbl-tag-template > div > div.tc-tags-wrapper {
+margin:0 0 0 0;
+}.tbl-style-invisible > table > tbody> tr > td > p > svg{
+  vertical-align: middle;
+  fill:#000000;
+}.tbl-style-invisible > table > tbody> tr > td > a > sup{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}.tbl-style-invisible > table > tbody> tr > td > p,
+.tbl-style-invisible > table > tbody> tr > td > p > a, 
+.tbl-style-invisible > table > tbody> tr > td > a,
+.tbl-style-invisible > table > tbody> tr > td > a > a,
+.tbl-style-invisible > table > tbody> tr > td > button, 
+.tbl-style-invisible > table > tbody> tr > td > .tc-tiddlylink,
+.tbl-style-invisible > table > tbody> tr > td > a > a.tc-tiddlylink{
+  text-shadow: none;
+  margin:0 0 0 0;
+  color:#000000;
+  background-color:transparent;
+  font-weight: normal;
+}.tbl-style-invisible > table > tbody> tr > td > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:15px;
+  padding:0 0 2px 0;
+  align:center;
+}.tbl-style-invisible > table > tbody > tr.tbl-record-row:nth-child(odd) {
+  background-color: transparent;
+}.tbl-style-invisible > table > tbody > tr.tbl-record-row:nth-child(even) {
+  background-color: transparent;
+}.tbl-style-invisible > table > tbody > tr.tbl-record-row:hover {
+  background-color: transparent;
+}.tbl-style-invisible > table > caption a:hover,
+.tbl-style-invisible > table > caption > .tc-tiddlylink:hover {
+  color:#001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-invisible > table > thead > tr > th a:hover, 
+.tbl-style-invisible > table > thead > tr > th button:hover,
+.tbl-style-invisible > table > thead> tr > th > .tc-tiddlylink:hover {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}.tbl-style-invisible > table > tfoot > tr > th a:hover,
+.tbl-style-invisible > table > tfoot > tr > th button:hover,
+.tbl-style-invisible > table > tfoot> tr > th > .tc-tiddlylink:hover {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}.tbl-style-invisible > table > tbody > tr > td a:hover,
+.tbl-style-invisible > table > tbody > tr > td > a > a:hover,
+.tbl-style-invisible > table > tbody > tr > td > .tc-tiddlylink:hover, 
+.tbl-style-invisible > table > tbody > tr > td > a > .tc-tiddlylink:hover{
+  color:#001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-invisible > div a:hover,
+.tbl-style-invisible > div .tc-tiddlylink:hover {
+  color: #001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-invisible > table > tbody> tr > .tbl-inpt-edit > input[type="text"],
+.tbl-style-invisible > table > tbody> tr > .tbl-inpt-edit > textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-invisible > table > tbody > tr > .tbl-inpt-check > span > button > label > input[type="checkbox"],
+.tbl-style-invisible > table > thead > tr > .tbl-inpt-check > span > button > label > input[type="checkbox"]{
+  vertical-align: middle;
+  margin: 0px 0px 2px 0px;
+}.tbl-style-invisible > table > tbody> tr > td > select {
+  background: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-invisible > table > tbody> tr > td > select > option {
+  background: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-invisible > table > tbody> tr > td.tbl-expand-pad,
+.tbl-style-invisible > table > tbody> tr > td.tbl-expand-pad > p > pre {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  padding: 5px 8px 5px 8px;
+}.tbl-style-invisible > table > tbody> tr > td.tbl-expand-nopad,
+.tbl-style-invisible > table > tbody> tr > td.tbl-expand-nopad > p,
+.tbl-style-invisible > table > tbody> tr > td.tbl-expand-nopad > p > pre {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}.tbl-style-invisible > table > tbody> tr > td > p > .tbl-inpt-edit {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-invisible > table > tbody> tr > td > canvas {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: ;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}.tbl-style-invisible > div > div.tbl-page-footer,
+.tbl-style-invisible > div > span > div.tbl-page-refresh {
+  text-align: center;
+  margin: 0 0 0 0;
+  padding: 2px 7px 2px 7px;
+  color:#000000;
+  background-color:transparent;
+  font-size: 15px;
+  line-height: 22px;
+  border-top: 0px solid #000000;
+  border-right: 0px solid #000000;
+  border-bottom: 0px solid #000000;
+  border-left: 0px solid #000000;
+}.tbl-style-invisible > div > span > div.tbl-page-refresh > button,
+.tbl-style-invisible > div > span > div.tbl-page-refresh > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 15px;
+}.tbl-style-invisible > div > div.tbl-page-footer > div.tbl-page-prev > button,
+.tbl-style-invisible > div > div.tbl-page-footer > div.tbl-page-prev > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 2px 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 15px;
+  float:left;
+}.tbl-style-invisible > div > div.tbl-page-footer > div.tbl-page-next > button,
+.tbl-style-invisible > div > div.tbl-page-footer > div.tbl-page-next > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 2px 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 15px;
+  float:right;
+}.tbl-style-invisible > div > div.tbl-page-footer > select {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  background: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-invisible > div > div.tbl-page-footer > div.tbl-page-prev > button > svg,
+.tbl-style-invisible > div > div.tbl-page-footer > div.tbl-page-next > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  padding:0 0 3px 0;
+}.tbl-delete-confirm {
+  color: white;
+  background-color:red;
+  padding: 8px;
+  margin: 0px;
+  text-align:center;
+}.tbl-delete-confirm > button {
+  color: white;
+  fill: white;
+}.tbl-edit-menu textarea{
+  width:100%;
+}
+.tbl-edit-wide{
+  width:94%;
+}
+
+.tbl-style-standard {  
+  text-shadow: none;
+  width:100%;
+  overflow:visible;
+}.tbl-style-standard > table{  
+  text-shadow: none;
+  border-collapse: collapse;
+  caption-side: top;
+  table-layout:auto;
+  width:100%;
+  margin: 0 0 0 0;
+  border-top: 1px solid #a5a5a5;
+  border-right: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+  border-left: 1px solid #a5a5a5;
+}.tbl-style-standard > table > caption {
+  margin: 0 0 0 0;
+  padding: 5px 7px 5px 7px;
+  text-shadow: none;
+  color:#000000;
+  background-color:#c6c6c6;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  border-top: 1px solid #a5a5a5;
+  border-right: 1px solid #a5a5a5;
+  border-bottom: 0px solid #a5a5a5;
+  border-left: 1px solid #a5a5a5;
+  text-align:center;
+}.tbl-style-standard > table > caption *,
+.tbl-style-standard > table > caption > div *{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-shadow: none;
+  color:#000000;
+  fill:#000000;
+}.tbl-style-standard > table > caption > div > .tbl-hidden-edit{
+  background: transparent !important;
+  border: none;
+  color:#000000!important;
+}.tbl-style-standard > table > caption > div > .tbl-hidden-edit-wide{
+  width: 100%;
+  background: transparent !important;
+  border: none;
+  color:#000000!important;
+}.tbl-style-standard > table > thead {
+  text-shadow: none;
+}.tbl-style-standard > table > thead > tr {
+  text-shadow: none;
+  background: #E0E0E0;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-standard > table > thead > tr > th {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 5px 7px 5px 7px;
+  border-top: 1px solid #a5a5a5;
+  border-right: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+  border-left: 1px solid #a5a5a5;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  white-space: nowrap;
+}.tbl-style-standard > table > thead> tr > th p, 
+.tbl-style-standard > table > thead> tr > th a,
+.tbl-style-standard > table > thead> tr > th button,
+.tbl-style-standard > table > thead> tr > th .tc-tiddlylink {
+  text-shadow: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color:#000000;
+  font-weight: bold;
+}.tbl-style-standard > table > thead> tr > th > button > svg,
+.tbl-style-standard > table > thead> tr > th > span > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:15px;
+  padding:0 0 2px 0;
+}.tbl-style-standard > table > thead> tr > th > button.tbl-sort-svg > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:10px;
+  padding:0 0 2px 0;
+}.tbl-style-standard > table > tfoot {
+  text-shadow: none;
+}.tbl-style-standard > table > tfoot > tr {
+  text-shadow: none;
+  background: #E0E0E0;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-standard > table > tfoot > tr > th {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 5px 7px 5px 7px;
+  border-top: 1px solid #a5a5a5;
+  border-right: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+  border-left: 1px solid #a5a5a5;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  white-space: nowrap;
+}.tbl-style-standard > table > tfoot> tr > th p, 
+.tbl-style-standard > table > tfoot> tr > th a,
+.tbl-style-standard > table > tfoot> tr > th button,
+.tbl-style-standard > table > tfoot> tr > th .tc-tiddlylink {
+  text-shadow: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color:#000000;
+  font-weight: bold;
+}.tbl-style-standard > table > tfoot> tr > th > button > svg,
+.tbl-style-standard > table > tfoot> tr > th > span > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:15px;
+  padding:0 0 2px 0;
+}.tbl-style-standard > table > tfoot> tr > th > button.tbl-sort-svg > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:10px;
+  padding:0 0 2px 0;
+}.tbl-style-standard > table > tbody {
+  text-shadow: none;
+}.tbl-style-standard > table > tbody > tr {
+  text-shadow: none;
+  background: #FFFFFF;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-standard > table > tbody > tr > td {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 3px 7px 3px 7px;
+  border-top: 1px solid #a5a5a5;
+  border-right: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+  border-left: 1px solid #a5a5a5;
+  text-align: left;
+}.tbl-style-standard > table > tbody > tr > td.tbl-tag-template > div > div.tc-tags-wrapper {
+margin:0 0 0 0;
+}.tbl-style-standard > table > tbody> tr > td > p > svg{
+  vertical-align: middle;
+  fill:#000000;
+}.tbl-style-standard > table > tbody> tr > td > a > sup{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}.tbl-style-standard > table > tbody> tr > td > p,
+.tbl-style-standard > table > tbody> tr > td > p > a, 
+.tbl-style-standard > table > tbody> tr > td > a,
+.tbl-style-standard > table > tbody> tr > td > a > a,
+.tbl-style-standard > table > tbody> tr > td > button, 
+.tbl-style-standard > table > tbody> tr > td > .tc-tiddlylink,
+.tbl-style-standard > table > tbody> tr > td > a > a.tc-tiddlylink{
+  text-shadow: none;
+  margin:0 0 0 0;
+  color:#000000;
+  background-color:transparent;
+  font-weight: normal;
+}.tbl-style-standard > table > tbody> tr > td > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:15px;
+  padding:0 0 2px 0;
+  align:center;
+}.tbl-style-standard > table > tbody > tr.tbl-record-row:nth-child(odd) {
+  background-color: #FFFFFF;
+}.tbl-style-standard > table > tbody > tr.tbl-record-row:nth-child(even) {
+  background-color: #FFFFFF;
+}.tbl-style-standard > table > tbody > tr.tbl-record-row:hover {
+  background-color: #f2f6ff;
+}.tbl-style-standard > table > caption a:hover,
+.tbl-style-standard > table > caption > .tc-tiddlylink:hover {
+  color:#001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-standard > table > thead > tr > th a:hover, 
+.tbl-style-standard > table > thead > tr > th button:hover,
+.tbl-style-standard > table > thead> tr > th > .tc-tiddlylink:hover {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}.tbl-style-standard > table > tfoot > tr > th a:hover,
+.tbl-style-standard > table > tfoot > tr > th button:hover,
+.tbl-style-standard > table > tfoot> tr > th > .tc-tiddlylink:hover {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}.tbl-style-standard > table > tbody > tr > td a:hover,
+.tbl-style-standard > table > tbody > tr > td > a > a:hover,
+.tbl-style-standard > table > tbody > tr > td > .tc-tiddlylink:hover, 
+.tbl-style-standard > table > tbody > tr > td > a > .tc-tiddlylink:hover{
+  color:#001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-standard > div a:hover,
+.tbl-style-standard > div .tc-tiddlylink:hover {
+  color: #001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-standard > table > tbody> tr > .tbl-inpt-edit > input[type="text"],
+.tbl-style-standard > table > tbody> tr > .tbl-inpt-edit > textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-standard > table > tbody > tr > .tbl-inpt-check > span > button > label > input[type="checkbox"],
+.tbl-style-standard > table > thead > tr > .tbl-inpt-check > span > button > label > input[type="checkbox"]{
+  vertical-align: middle;
+  margin: 0px 0px 2px 0px;
+}.tbl-style-standard > table > tbody> tr > td > select {
+  background: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-standard > table > tbody> tr > td > select > option {
+  background: #FFFFFF;
+  border: none;
+  color: #000000;
+}.tbl-style-standard > table > tbody> tr > td.tbl-expand-pad,
+.tbl-style-standard > table > tbody> tr > td.tbl-expand-pad > p > pre {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  padding: 5px 8px 5px 8px;
+}.tbl-style-standard > table > tbody> tr > td.tbl-expand-nopad,
+.tbl-style-standard > table > tbody> tr > td.tbl-expand-nopad > p,
+.tbl-style-standard > table > tbody> tr > td.tbl-expand-nopad > p > pre {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}.tbl-style-standard > table > tbody> tr > td > p > .tbl-inpt-edit {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-standard > table > tbody> tr > td > canvas {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: ;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}.tbl-style-standard > div > div.tbl-page-footer,
+.tbl-style-standard > div > span > div.tbl-page-refresh {
+  text-align: center;
+  margin: 0 0 0 0;
+  padding: 5px 7px 5px 7px;
+  color:#000000;
+  background-color:#c6c6c6;
+  font-size: 15px;
+  line-height: 22px;
+  border-top: 0px solid #a5a5a5;
+  border-right: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+  border-left: 1px solid #a5a5a5;
+}.tbl-style-standard > div > span > div.tbl-page-refresh > button,
+.tbl-style-standard > div > span > div.tbl-page-refresh > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 15px;
+}.tbl-style-standard > div > div.tbl-page-footer > div.tbl-page-prev > button,
+.tbl-style-standard > div > div.tbl-page-footer > div.tbl-page-prev > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 2px 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 15px;
+  float:left;
+}.tbl-style-standard > div > div.tbl-page-footer > div.tbl-page-next > button,
+.tbl-style-standard > div > div.tbl-page-footer > div.tbl-page-next > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 2px 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 15px;
+  float:right;
+}.tbl-style-standard > div > div.tbl-page-footer > select {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  background: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-standard > div > div.tbl-page-footer > div.tbl-page-prev > button > svg,
+.tbl-style-standard > div > div.tbl-page-footer > div.tbl-page-next > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  padding:0 0 3px 0;
+}.tbl-delete-confirm {
+  color: white;
+  background-color:red;
+  padding: 8px;
+  margin: 0px;
+  text-align:center;
+}.tbl-delete-confirm > button {
+  color: white;
+  fill: white;
+}.tbl-edit-menu textarea{
+  width:100%;
+}
+.tbl-edit-wide{
+  width:94%;
+}
+
+.tbl-style-tight {  
+  text-shadow: none;
+  width:100%;
+  overflow:visible;
+}.tbl-style-tight > table{  
+  text-shadow: none;
+  border-collapse: collapse;
+  caption-side: top;
+  table-layout:auto;
+  width:100%;
+  margin: 0 0 0 0;
+  border-top: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+}.tbl-style-tight > table > caption {
+  margin: 0 0 0 0;
+  padding: 1px 7px 1px 7px;
+  text-shadow: none;
+  color:#000000;
+  background-color:#DDDDDD;
+  vertical-align: middle;
+  font-size: 10pt;
+  line-height: 20px;
+  border-top: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 0px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  text-align:center;
+}.tbl-style-tight > table > caption *,
+.tbl-style-tight > table > caption > div *{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-shadow: none;
+  color:#000000;
+  fill:#000000;
+}.tbl-style-tight > table > caption > div > .tbl-hidden-edit{
+  background: transparent !important;
+  border: none;
+  color:#000000!important;
+}.tbl-style-tight > table > caption > div > .tbl-hidden-edit-wide{
+  width: 100%;
+  background: transparent !important;
+  border: none;
+  color:#000000!important;
+}.tbl-style-tight > table > thead {
+  text-shadow: none;
+}.tbl-style-tight > table > thead > tr {
+  text-shadow: none;
+  background: #F0F0F0;
+  vertical-align: middle;
+  font-size: 10pt;
+  line-height: 20px;
+}.tbl-style-tight > table > thead > tr > th {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 1px 7px 1px 7px;
+  border-top: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 10pt;
+  line-height: 20px;
+  white-space: nowrap;
+}.tbl-style-tight > table > thead> tr > th p, 
+.tbl-style-tight > table > thead> tr > th a,
+.tbl-style-tight > table > thead> tr > th button,
+.tbl-style-tight > table > thead> tr > th .tc-tiddlylink {
+  text-shadow: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color:#000000;
+  font-weight: bold;
+}.tbl-style-tight > table > thead> tr > th > button > svg,
+.tbl-style-tight > table > thead> tr > th > span > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:10pt;
+  padding:0 0 2px 0;
+}.tbl-style-tight > table > thead> tr > th > button.tbl-sort-svg > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:10px;
+  padding:0 0 2px 0;
+}.tbl-style-tight > table > tfoot {
+  text-shadow: none;
+}.tbl-style-tight > table > tfoot > tr {
+  text-shadow: none;
+  background: #F0F0F0;
+  vertical-align: middle;
+  font-size: 10pt;
+  line-height: 20px;
+}.tbl-style-tight > table > tfoot > tr > th {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 1px 7px 1px 7px;
+  border-top: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 10pt;
+  line-height: 20px;
+  white-space: nowrap;
+}.tbl-style-tight > table > tfoot> tr > th p, 
+.tbl-style-tight > table > tfoot> tr > th a,
+.tbl-style-tight > table > tfoot> tr > th button,
+.tbl-style-tight > table > tfoot> tr > th .tc-tiddlylink {
+  text-shadow: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color:#000000;
+  font-weight: bold;
+}.tbl-style-tight > table > tfoot> tr > th > button > svg,
+.tbl-style-tight > table > tfoot> tr > th > span > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:10pt;
+  padding:0 0 2px 0;
+}.tbl-style-tight > table > tfoot> tr > th > button.tbl-sort-svg > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:10px;
+  padding:0 0 2px 0;
+}.tbl-style-tight > table > tbody {
+  text-shadow: none;
+}.tbl-style-tight > table > tbody > tr {
+  text-shadow: none;
+  background: #FFFFFF;
+  vertical-align: middle;
+  font-size: 10pt;
+  line-height: 20px;
+}.tbl-style-tight > table > tbody > tr > td {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 1px 7px 1px 7px;
+  border-top: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  text-align: left;
+}.tbl-style-tight > table > tbody > tr > td.tbl-tag-template > div > div.tc-tags-wrapper {
+margin:0 0 0 0;
+}.tbl-style-tight > table > tbody> tr > td > p > svg{
+  vertical-align: middle;
+  fill:#000000;
+}.tbl-style-tight > table > tbody> tr > td > a > sup{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}.tbl-style-tight > table > tbody> tr > td > p,
+.tbl-style-tight > table > tbody> tr > td > p > a, 
+.tbl-style-tight > table > tbody> tr > td > a,
+.tbl-style-tight > table > tbody> tr > td > a > a,
+.tbl-style-tight > table > tbody> tr > td > button, 
+.tbl-style-tight > table > tbody> tr > td > .tc-tiddlylink,
+.tbl-style-tight > table > tbody> tr > td > a > a.tc-tiddlylink{
+  text-shadow: none;
+  margin:0 0 0 0;
+  color:#000000;
+  background-color:transparent;
+  font-weight: normal;
+}.tbl-style-tight > table > tbody> tr > td > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:10pt;
+  padding:0 0 2px 0;
+  align:center;
+}.tbl-style-tight > table > tbody > tr.tbl-record-row:nth-child(odd) {
+  background-color: #FFFFFF;
+}.tbl-style-tight > table > tbody > tr.tbl-record-row:nth-child(even) {
+  background-color: #FCFCFC;
+}.tbl-style-tight > table > tbody > tr.tbl-record-row:hover {
+  background-color: #FFFEE2;
+}.tbl-style-tight > table > caption a:hover,
+.tbl-style-tight > table > caption > .tc-tiddlylink:hover {
+  color:#001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-tight > table > thead > tr > th a:hover, 
+.tbl-style-tight > table > thead > tr > th button:hover,
+.tbl-style-tight > table > thead> tr > th > .tc-tiddlylink:hover {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}.tbl-style-tight > table > tfoot > tr > th a:hover,
+.tbl-style-tight > table > tfoot > tr > th button:hover,
+.tbl-style-tight > table > tfoot> tr > th > .tc-tiddlylink:hover {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}.tbl-style-tight > table > tbody > tr > td a:hover,
+.tbl-style-tight > table > tbody > tr > td > a > a:hover,
+.tbl-style-tight > table > tbody > tr > td > .tc-tiddlylink:hover, 
+.tbl-style-tight > table > tbody > tr > td > a > .tc-tiddlylink:hover{
+  color:#001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-tight > div a:hover,
+.tbl-style-tight > div .tc-tiddlylink:hover {
+  color: #001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-tight > table > tbody> tr > .tbl-inpt-edit > input[type="text"],
+.tbl-style-tight > table > tbody> tr > .tbl-inpt-edit > textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-tight > table > tbody > tr > .tbl-inpt-check > span > button > label > input[type="checkbox"],
+.tbl-style-tight > table > thead > tr > .tbl-inpt-check > span > button > label > input[type="checkbox"]{
+  vertical-align: middle;
+  margin: 0px 0px 2px 0px;
+}.tbl-style-tight > table > tbody> tr > td > select {
+  background: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-tight > table > tbody> tr > td > select > option {
+  background: #FFFFFF;
+  border: none;
+  color: #000000;
+}.tbl-style-tight > table > tbody> tr > td.tbl-expand-pad,
+.tbl-style-tight > table > tbody> tr > td.tbl-expand-pad > p > pre {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  padding: 5px 8px 5px 8px;
+}.tbl-style-tight > table > tbody> tr > td.tbl-expand-nopad,
+.tbl-style-tight > table > tbody> tr > td.tbl-expand-nopad > p,
+.tbl-style-tight > table > tbody> tr > td.tbl-expand-nopad > p > pre {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}.tbl-style-tight > table > tbody> tr > td > p > .tbl-inpt-edit {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-tight > table > tbody> tr > td > canvas {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: ;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}.tbl-style-tight > div > div.tbl-page-footer,
+.tbl-style-tight > div > span > div.tbl-page-refresh {
+  text-align: center;
+  margin: 0 0 0 0;
+  padding: 1px 7px 1px 7px;
+  color:#000000;
+  background-color:#DDDDDD;
+  font-size: 10pt;
+  line-height: 20px;
+  border-top: 0px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+}.tbl-style-tight > div > span > div.tbl-page-refresh > button,
+.tbl-style-tight > div > span > div.tbl-page-refresh > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 10pt;
+}.tbl-style-tight > div > div.tbl-page-footer > div.tbl-page-prev > button,
+.tbl-style-tight > div > div.tbl-page-footer > div.tbl-page-prev > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 2px 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 10pt;
+  float:left;
+}.tbl-style-tight > div > div.tbl-page-footer > div.tbl-page-next > button,
+.tbl-style-tight > div > div.tbl-page-footer > div.tbl-page-next > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 2px 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 10pt;
+  float:right;
+}.tbl-style-tight > div > div.tbl-page-footer > select {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  background: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-tight > div > div.tbl-page-footer > div.tbl-page-prev > button > svg,
+.tbl-style-tight > div > div.tbl-page-footer > div.tbl-page-next > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  padding:0 0 3px 0;
+}.tbl-delete-confirm {
+  color: white;
+  background-color:red;
+  padding: 8px;
+  margin: 0px;
+  text-align:center;
+}.tbl-delete-confirm > button {
+  color: white;
+  fill: white;
+}.tbl-edit-menu textarea{
+  width:100%;
+}
+.tbl-edit-wide{
+  width:94%;
+}
+
+.tbl-style-default {  
+  text-shadow: none;
+  width:100%;
+  overflow:visible;
+}.tbl-style-default > table{  
+  text-shadow: none;
+  border-collapse: collapse;
+  caption-side: top;
+  table-layout:auto;
+  width:100%;
+  margin: 0 0 0 0;
+  border-top: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+}.tbl-style-default > table > caption {
+  margin: 0 0 0 0;
+  padding: 4px 7px 4px 7px;
+  text-shadow: none;
+  color:#000000;
+  background-color:#DDDDDD;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  border-top: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 0px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  text-align:center;
+}.tbl-style-default > table > caption *,
+.tbl-style-default > table > caption > div *{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-shadow: none;
+  color:#000000;
+  fill:#000000;
+}.tbl-style-default > table > caption > div > .tbl-hidden-edit{
+  background: transparent !important;
+  border: none;
+  color:#000000!important;
+}.tbl-style-default > table > caption > div > .tbl-hidden-edit-wide{
+  width: 100%;
+  background: transparent !important;
+  border: none;
+  color:#000000!important;
+}.tbl-style-default > table > thead {
+  text-shadow: none;
+}.tbl-style-default > table > thead > tr {
+  text-shadow: none;
+  background: #F0F0F0;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-default > table > thead > tr > th {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 4px 7px 4px 7px;
+  border-top: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  white-space: nowrap;
+}.tbl-style-default > table > thead> tr > th p, 
+.tbl-style-default > table > thead> tr > th a,
+.tbl-style-default > table > thead> tr > th button,
+.tbl-style-default > table > thead> tr > th .tc-tiddlylink {
+  text-shadow: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color:#000000;
+  font-weight: bold;
+}.tbl-style-default > table > thead> tr > th > button > svg,
+.tbl-style-default > table > thead> tr > th > span > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:15px;
+  padding:0 0 2px 0;
+}.tbl-style-default > table > thead> tr > th > button.tbl-sort-svg > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:10px;
+  padding:0 0 2px 0;
+}.tbl-style-default > table > tfoot {
+  text-shadow: none;
+}.tbl-style-default > table > tfoot > tr {
+  text-shadow: none;
+  background: #F0F0F0;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-default > table > tfoot > tr > th {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 4px 7px 4px 7px;
+  border-top: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+  white-space: nowrap;
+}.tbl-style-default > table > tfoot> tr > th p, 
+.tbl-style-default > table > tfoot> tr > th a,
+.tbl-style-default > table > tfoot> tr > th button,
+.tbl-style-default > table > tfoot> tr > th .tc-tiddlylink {
+  text-shadow: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color:#000000;
+  font-weight: bold;
+}.tbl-style-default > table > tfoot> tr > th > button > svg,
+.tbl-style-default > table > tfoot> tr > th > span > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:15px;
+  padding:0 0 2px 0;
+}.tbl-style-default > table > tfoot> tr > th > button.tbl-sort-svg > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:10px;
+  padding:0 0 2px 0;
+}.tbl-style-default > table > tbody {
+  text-shadow: none;
+}.tbl-style-default > table > tbody > tr {
+  text-shadow: none;
+  background: #FFFFFF;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 22px;
+}.tbl-style-default > table > tbody > tr > td {
+  text-shadow: none;
+  color:#000000;
+  background: transparent;
+  margin: 0 0 0 0;
+  padding: 2px 7px 2px 7px;
+  border-top: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  text-align: left;
+}.tbl-style-default > table > tbody > tr > td.tbl-tag-template > div > div.tc-tags-wrapper {
+margin:0 0 0 0;
+}.tbl-style-default > table > tbody> tr > td > p > svg{
+  vertical-align: middle;
+  fill:#000000;
+}.tbl-style-default > table > tbody> tr > td > a > sup{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}.tbl-style-default > table > tbody> tr > td > p,
+.tbl-style-default > table > tbody> tr > td > p > a, 
+.tbl-style-default > table > tbody> tr > td > a,
+.tbl-style-default > table > tbody> tr > td > a > a,
+.tbl-style-default > table > tbody> tr > td > button, 
+.tbl-style-default > table > tbody> tr > td > .tc-tiddlylink,
+.tbl-style-default > table > tbody> tr > td > a > a.tc-tiddlylink{
+  text-shadow: none;
+  margin:0 0 0 0;
+  color:#000000;
+  background-color:transparent;
+  font-weight: normal;
+}.tbl-style-default > table > tbody> tr > td > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  height:15px;
+  padding:0 0 2px 0;
+  align:center;
+}.tbl-style-default > table > tbody > tr.tbl-record-row:nth-child(odd) {
+  background-color: #FFFFFF;
+}.tbl-style-default > table > tbody > tr.tbl-record-row:nth-child(even) {
+  background-color: #FCFCFC;
+}.tbl-style-default > table > tbody > tr.tbl-record-row:hover {
+  background-color: #FFFEE2;
+}.tbl-style-default > table > caption a:hover,
+.tbl-style-default > table > caption > .tc-tiddlylink:hover {
+  color:#001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-default > table > thead > tr > th a:hover, 
+.tbl-style-default > table > thead > tr > th button:hover,
+.tbl-style-default > table > thead> tr > th > .tc-tiddlylink:hover {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}.tbl-style-default > table > tfoot > tr > th a:hover,
+.tbl-style-default > table > tfoot > tr > th button:hover,
+.tbl-style-default > table > tfoot> tr > th > .tc-tiddlylink:hover {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}.tbl-style-default > table > tbody > tr > td a:hover,
+.tbl-style-default > table > tbody > tr > td > a > a:hover,
+.tbl-style-default > table > tbody > tr > td > .tc-tiddlylink:hover, 
+.tbl-style-default > table > tbody > tr > td > a > .tc-tiddlylink:hover{
+  color:#001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-default > div a:hover,
+.tbl-style-default > div .tc-tiddlylink:hover {
+  color: #001177;
+  text-decoration: none;
+  font-weight: normal;
+}.tbl-style-default > table > tbody> tr > .tbl-inpt-edit > input[type="text"],
+.tbl-style-default > table > tbody> tr > .tbl-inpt-edit > textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-default > table > tbody > tr > .tbl-inpt-check > span > button > label > input[type="checkbox"],
+.tbl-style-default > table > thead > tr > .tbl-inpt-check > span > button > label > input[type="checkbox"]{
+  vertical-align: middle;
+  margin: 0px 0px 2px 0px;
+}.tbl-style-default > table > tbody> tr > td > select {
+  background: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-default > table > tbody> tr > td > select > option {
+  background: #FFFFFF;
+  border: none;
+  color: #000000;
+}.tbl-style-default > table > tbody> tr > td.tbl-expand-pad,
+.tbl-style-default > table > tbody> tr > td.tbl-expand-pad > p > pre {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  padding: 5px 8px 5px 8px;
+}.tbl-style-default > table > tbody> tr > td.tbl-expand-nopad,
+.tbl-style-default > table > tbody> tr > td.tbl-expand-nopad > p,
+.tbl-style-default > table > tbody> tr > td.tbl-expand-nopad > p > pre {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}.tbl-style-default > table > tbody> tr > td > p > .tbl-inpt-edit {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-default > table > tbody> tr > td > canvas {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: ;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}.tbl-style-default > div > div.tbl-page-footer,
+.tbl-style-default > div > span > div.tbl-page-refresh {
+  text-align: center;
+  margin: 0 0 0 0;
+  padding: 4px 7px 4px 7px;
+  color:#000000;
+  background-color:#DDDDDD;
+  font-size: 15px;
+  line-height: 22px;
+  border-top: 0px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+}.tbl-style-default > div > span > div.tbl-page-refresh > button,
+.tbl-style-default > div > span > div.tbl-page-refresh > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 15px;
+}.tbl-style-default > div > div.tbl-page-footer > div.tbl-page-prev > button,
+.tbl-style-default > div > div.tbl-page-footer > div.tbl-page-prev > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 2px 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 15px;
+  float:left;
+}.tbl-style-default > div > div.tbl-page-footer > div.tbl-page-next > button,
+.tbl-style-default > div > div.tbl-page-footer > div.tbl-page-next > .tc-tiddlylink{
+  padding: 0 0 0 0;
+  margin: 2px 0 0 0;
+  color:#000000;
+  font-weight: normal;
+  font-size: 15px;
+  float:right;
+}.tbl-style-default > div > div.tbl-page-footer > select {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  background: transparent;
+  border: none;
+  color: #000000;
+}.tbl-style-default > div > div.tbl-page-footer > div.tbl-page-prev > button > svg,
+.tbl-style-default > div > div.tbl-page-footer > div.tbl-page-next > button > svg {
+  text-shadow: none;
+  fill:#000000;
+  padding:0 0 3px 0;
+}.tbl-delete-confirm {
+  color: white;
+  background-color:red;
+  padding: 8px;
+  margin: 0px;
+  text-align:center;
+}.tbl-delete-confirm > button {
+  color: white;
+  fill: white;
+}.tbl-edit-menu textarea{
+  width:100%;
+}
+.tbl-edit-wide{
+  width:94%;
+}
+
 /*
 
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
