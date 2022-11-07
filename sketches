@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sketches</title>
+	<link rel="stylesheet" href="tufte.css"/>
+</head>
+<body>
+<article>
+	<h1 id="tufte-css">Sketches</h1>
+	<p class="subtitle">Interrupted Time Series</p>
+	<section>
+		<p>
+		</p>
+	</section>
+</article>
+</body>
+</html>
