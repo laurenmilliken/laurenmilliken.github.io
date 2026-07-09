@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Surgery Gap | Half the world can't afford surgery</title>
+<meta name="description" content="Half the world can't afford surgery. The data explains why, and five Watsi patients show what a few hundred dollars can do. 100% of your donation funds life-changing care.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14342E;            /* deep teal-charcoal for text */
+    --ink-soft:#3A5A53;
+    --paper:#FFFFFF;          /* Watsi backgrounds are clean white */
+    --paper-alt:#F4F9F7;      /* faint teal-tinted section wash */
+    --card:#FFFFFF;
+    --teal:#12A594;          /* Watsi bright teal (primary) */
+    --teal-deep:#0B7D6F;     /* pressed / links */
+    --teal-ink:#075E54;      /* darkest teal */
+    --yellow:#FFC23C;        /* Watsi sunny yellow accent */
+    --yellow-deep:#F0A500;
+    --gap-red:#E26D4F;       /* warm coral for the "gap" data, softened */
+    --muted:#6E827C;
+    --line:#E3ECE9;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --display:'Poppins',-apple-system,Helvetica,Arial,sans-serif;
+    --body:'Inter',-apple-system,Helvetica,Arial,sans-serif;
+    --max:1080px;
+    --radius:16px;           /* Watsi uses generous rounding */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+  }
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--teal-deep)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px}
+
+  /* ---------- shared ---------- */
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .eyebrow{
+    font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.02em;
+    color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:16px;
+  }
+  .eyebrow::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--yellow);display:inline-block;flex:none}
+  h2{
+    font-family:var(--display);font-weight:600;font-size:clamp(30px,4.6vw,46px);
+    line-height:1.12;letter-spacing:-.02em;max-width:18ch;margin-bottom:22px;color:var(--ink);
+  }
+  .lede{font-size:clamp(17px,2vw,20px);color:var(--ink-soft);max-width:62ch;margin-bottom:14px}
+  .lede strong{color:var(--ink);font-weight:600}
+  .source{
+    font-family:var(--body);font-size:12.5px;color:var(--muted);line-height:1.6;
+    border-left:3px solid var(--line);padding-left:14px;margin-top:26px;max-width:72ch;
+  }
+  .source a{color:var(--teal-deep)}
+  section{padding:96px 0}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  }
+  .topbar .wrap{display:flex;align-items:center;gap:22px;height:64px}
+  .wordmark{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;white-space:nowrap}
+  .wordmark b{color:var(--teal);font-weight:600}
+  .topnav{display:flex;gap:26px;margin-left:auto}
+  .topnav a{
+    font-family:var(--body);font-size:15px;font-weight:500;
+    color:var(--ink-soft);text-decoration:none;padding:6px 0;
+  }
+  .topnav a:hover{color:var(--teal)}
+  .btn{
+    display:inline-block;font-family:var(--body);font-weight:600;font-size:15px;
+    padding:13px 26px;border-radius:999px;text-decoration:none;text-align:center;
+    transition:transform .15s ease,box-shadow .15s ease,background .15s ease;border:0;cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn-primary{background:var(--teal);color:#fff;box-shadow:0 6px 16px -6px rgba(18,165,148,.6)}
+  .btn-primary:hover{background:var(--teal-deep);box-shadow:0 8px 20px -6px rgba(11,125,111,.7)}
+  .btn-ghost{background:transparent;color:var(--teal-deep);border:2px solid var(--teal)}
+  .btn-ghost:hover{background:var(--paper-alt)}
+  .btn-yellow{background:var(--yellow);color:var(--ink);box-shadow:0 6px 16px -6px rgba(240,165,0,.6)}
+  .btn-yellow:hover{background:var(--yellow-deep)}
+  .topbar .btn{padding:10px 20px;font-size:14px;margin-left:10px}
+  @media(max-width:820px){.topnav{display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:100px 0 116px;overflow:hidden;background:var(--paper-alt)}
+  .hero::after{content:"";position:absolute;top:-140px;right:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(18,165,148,.14),transparent 70%);z-index:1}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{
+    font-family:var(--display);font-weight:700;letter-spacing:-.03em;
+    font-size:clamp(42px,7.4vw,82px);line-height:1.04;max-width:15ch;color:var(--ink);
+  }
+  .hero h1 em{font-style:normal;font-weight:700;color:var(--teal);position:relative;white-space:nowrap}
+  .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.14em;background:var(--yellow);border-radius:3px;z-index:-1}
+  .hero .sub{
+    margin-top:26px;font-size:clamp(18px,2.2vw,22px);color:var(--ink-soft);max-width:52ch;
+  }
+  .hero .sub b{color:var(--ink);font-weight:600}
+  .hero-cta{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-note{font-family:var(--body);font-size:14px;font-weight:500;color:var(--teal-deep);display:inline-flex;align-items:center;gap:7px}
+  .hero-note::before{content:"✓";display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:var(--teal);color:#fff;border-radius:50%;font-size:12px;font-weight:700}
+  /* the signature dot field: 100 people, ~47 at risk */
+  .dotfield{
+    margin-top:60px;border-top:1px solid var(--line);padding-top:28px;
+  }
+  .dotfield-label{font-family:var(--body);font-size:15px;font-weight:500;color:var(--ink-soft);margin-bottom:16px}
+  .dotfield-label b{color:var(--gap-red);font-weight:700;font-size:18px}
+  .dots{display:grid;grid-template-columns:repeat(25,1fr);gap:10px;max-width:820px}
+  .dots span{
+    aspect-ratio:1;border-radius:50%;background:#CFE3DE;
+    transform:scale(.6);opacity:.4;transition:transform .4s ease,opacity .4s ease,background .4s ease;
+  }
+  .dots.lit span{transform:scale(1);opacity:1}
+  .dots span.risk{background:var(--gap-red)}
+  @media(max-width:640px){.dots{grid-template-columns:repeat(10,1fr)}}
+
+  /* ---------- act shell ---------- */
+  .act{border-top:1px solid var(--line)}
+  .act:nth-of-type(even){background:var(--paper-alt)}
+  .act-head{display:flex;align-items:baseline;gap:18px;margin-bottom:8px}
+  .act-num{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.12em}
+
+  /* ---------- act 1: proportional bars ---------- */
+  .propchart{margin-top:44px;max-width:840px}
+  .prop-row{margin-bottom:34px}
+  .prop-title{font-family:var(--body);font-size:14px;font-weight:600;color:var(--ink-soft);margin-bottom:11px}
+  .prop-bar{display:flex;height:54px;border-radius:12px;overflow:hidden;background:var(--card);border:1px solid var(--line);gap:2px}
+  .prop-seg{display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:15px;color:#fff;min-width:0;white-space:nowrap;transition:width 1.1s cubic-bezier(.2,.7,.2,1);width:0}
+  .prop-seg small{font-family:var(--body);font-weight:500;font-size:11px;opacity:.9;margin-left:8px}
+  .seg-poor{background:var(--gap-red)}
+  .seg-rest{background:var(--teal);}
+  .prop-caption{font-size:15px;color:var(--muted);margin-top:10px}
+  .statline{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;
+    background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+    margin-top:46px;
+  }
+  .stat{background:var(--card);padding:28px 26px}
+  .stat .n{font-family:var(--display);font-weight:700;font-size:clamp(30px,3.6vw,42px);line-height:1;color:var(--teal)}
+  .stat .n em{font-style:normal;color:var(--gap-red)}
+  .stat .l{font-size:14.5px;color:var(--ink-soft);margin-top:12px;line-height:1.5}
+
+  /* ---------- act 2: dot grid + country chips ---------- */
+  .risk-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;margin-top:44px;align-items:start}
+  @media(max-width:860px){.risk-layout{grid-template-columns:1fr}}
+  .biggrid{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;max-width:460px}
+  .biggrid span{aspect-ratio:1;border-radius:50%;background:#CFE3DE;transition:background .3s ease}
+  .biggrid span.risk{background:var(--gap-red)}
+  .biggrid-caption{font-size:13.5px;color:var(--ink-soft);margin-top:16px;max-width:48ch;line-height:1.65}
+  .biggrid-caption b{color:var(--gap-red);font-weight:600}
+  .country-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:44px}
+  @media(max-width:720px){.country-list{grid-template-columns:1fr}}
+  .country{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:0 4px 14px -10px rgba(20,52,46,.25)}
+  .country .row{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--body);font-size:14px;font-weight:600;color:var(--ink);letter-spacing:.01em}
+  .country .row b{font-family:var(--display);font-size:18px;color:var(--gap-red);font-weight:700}
+  .country .track{height:9px;background:var(--paper-alt);border-radius:5px;margin-top:11px;overflow:hidden}
+  .country .fill{height:100%;background:var(--gap-red);width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1);border-radius:5px}
+  .country .who{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.5}
+  .country .who a{color:var(--teal-deep);font-weight:600;text-decoration:none;border-bottom:2px solid var(--yellow)}
+  .pullquote{
+    margin-top:52px;background:var(--card);border-radius:var(--radius);border:1px solid var(--line);
+    border-left:5px solid var(--yellow);padding:26px 30px;max-width:64ch;box-shadow:0 8px 22px -16px rgba(20,52,46,.3);
+  }
+  .pullquote p{font-family:var(--display);font-weight:500;font-size:clamp(18px,2.2vw,23px);line-height:1.4;color:var(--ink);letter-spacing:-.01em}
+  .pullquote cite{display:block;margin-top:14px;font-family:var(--body);font-style:normal;font-size:13px;font-weight:500;color:var(--muted)}
+
+  /* ---------- act 3: three gaps ---------- */
+  .gaps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:44px}
+  .gapcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;display:flex;flex-direction:column;box-shadow:0 8px 22px -16px rgba(20,52,46,.3)}
+  .gapcard h3{font-family:var(--display);font-weight:600;font-size:22px;margin-bottom:6px;color:var(--ink);letter-spacing:-.01em}
+  .gapcard .g-sub{font-size:13.5px;color:var(--muted);margin-bottom:24px;line-height:1.5}
+  .hbar{margin-bottom:15px}
+  .hbar .hl{display:flex;justify-content:space-between;font-family:var(--body);font-size:13px;font-weight:500;color:var(--ink-soft);margin-bottom:6px}
+  .hbar .hl b{color:var(--ink);font-family:var(--display);font-weight:600}
+  .hbar .ht{height:14px;background:var(--paper-alt);border-radius:7px;overflow:hidden;position:relative}
+  .hbar .hf{height:100%;width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1);border-radius:7px}
+  .hf.us{background:var(--teal-ink)}
+  .hf.low{background:var(--gap-red)}
+  .hf.bench{background:var(--teal)}
+  .gapcard .g-fact{
+    margin-top:auto;padding-top:20px;border-top:1px dashed var(--line);
+    font-size:14px;color:var(--ink-soft);line-height:1.6;
+  }
+  .gapcard .g-fact b{color:var(--ink);font-weight:600}
+  .benchline{position:relative}
+  .benchline::after{
+    content:"";position:absolute;top:-4px;bottom:-4px;left:calc(100% * 20 / 22);
+    width:2px;background:var(--yellow-deep);
+  }
+
+  /* ---------- act 4: patient cards ---------- */
+  .people-intro{max-width:62ch}
+  .receipts{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:26px;margin-top:48px}
+  .receipt{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:0 14px 30px -20px rgba(20,52,46,.4);
+    display:flex;flex-direction:column;position:relative;overflow:hidden;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .receipt:hover{transform:translateY(-3px);box-shadow:0 20px 38px -20px rgba(20,52,46,.45)}
+  .receipt .photo{
+    height:210px;background:var(--teal-ink);overflow:hidden;position:relative;
+  }
+  .receipt .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .receipt .photo .fallback{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-family:var(--display);font-weight:600;font-size:64px;color:#fff;background:linear-gradient(160deg,var(--teal),var(--teal-ink));
+  }
+  .receipt .body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
+  .r-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .r-name{font-family:var(--display);font-weight:600;font-size:24px;color:var(--ink);letter-spacing:-.01em}
+  .r-meta{font-family:var(--body);font-size:12px;font-weight:500;color:var(--muted);text-align:right;line-height:1.5}
+  .r-story{font-size:14.5px;color:var(--ink-soft);margin:12px 0 14px;line-height:1.6}
+  .r-quote{
+    font-family:var(--display);font-weight:500;font-size:15px;color:var(--teal-deep);
+    line-height:1.5;margin-bottom:16px;letter-spacing:-.01em;
+  }
+  .r-quote span{font-family:var(--body);font-weight:600;font-style:normal;font-size:11px;color:var(--muted);display:block;margin-top:4px;letter-spacing:.03em}
+  .r-datafact{
+    font-size:13px;color:var(--ink-soft);background:#FFF6E0;border-left:4px solid var(--yellow);
+    padding:11px 14px;border-radius:0 10px 10px 0;margin-bottom:18px;line-height:1.55;
+  }
+  .r-datafact b{color:var(--ink);font-weight:600}
+  .ledger{font-size:13px;color:var(--ink-soft)}
+  .ledger .li{display:flex;align-items:baseline;gap:8px;padding:4px 0}
+  .ledger .li .dots-lead{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-3px)}
+  .ledger .li span:first-child{font-weight:500}
+  .ledger .li .amt{color:var(--ink);font-family:var(--mono);font-weight:500}
+  .ledger .total{
+    display:flex;justify-content:space-between;border-top:2px solid var(--teal);
+    margin-top:10px;padding-top:10px;font-family:var(--display);font-weight:600;font-size:15px;color:var(--ink);
+  }
+  .ledger .total span:last-child{color:var(--teal)}
+  .r-progress{margin-top:20px}
+  .r-progress .pl{display:flex;justify-content:space-between;font-family:var(--body);font-size:13px;font-weight:600;margin-bottom:7px}
+  .r-progress .pl .raised{color:var(--teal-deep)}
+  .r-progress .pl .togo{color:var(--gap-red)}
+  .r-progress .pt{height:12px;background:var(--paper-alt);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .r-progress .pf{height:100%;background:linear-gradient(90deg,var(--teal),var(--teal-deep));width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1);border-radius:6px}
+  .r-stamp{
+    font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--yellow-deep);
+    background:#FFF6E0;border-radius:999px;padding:5px 14px;display:inline-flex;align-items:center;gap:6px;
+    margin-top:16px;align-self:flex-start;
+  }
+  .r-stamp::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--yellow-deep)}
+  .r-stamp.funded{color:var(--teal-deep);background:#E4F5F0}
+  .r-stamp.funded::before{background:var(--teal)}
+  .receipt .btn{margin-top:18px;width:100%}
+  .r-donors{font-family:var(--body);font-size:12px;font-weight:500;color:var(--muted);text-align:center;margin-top:12px}
+  .updated{font-family:var(--body);font-size:13px;color:var(--muted);margin-top:28px}
+
+  /* ---------- act 5: give ---------- */
+  .act.give,.act.give:nth-of-type(even){background:#0B3D36;color:#F0F8F5;border-top:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .give .eyebrow{color:#FFE39A}
+  .give .eyebrow::before{background:var(--yellow)}
+  .give h2{color:#fff}
+  .give .lede{color:#F0F8F5}
+  .give .lede b,.give .lede strong{color:#fff}
+  .give-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;margin-top:48px;align-items:stretch}
+  @media(max-width:860px){.give-grid{grid-template-columns:1fr}}
+  .give-card{border-radius:var(--radius);padding:36px 34px;display:flex;flex-direction:column}
+  .give-monthly{background:var(--yellow);color:var(--ink);box-shadow:0 22px 46px -22px rgba(0,0,0,.55)}
+  .give-monthly .tag{
+    font-family:var(--body);font-size:11px;font-weight:700;letter-spacing:.1em;background:var(--ink);
+    color:var(--yellow);padding:5px 13px;border-radius:999px;align-self:flex-start;margin-bottom:20px;
+  }
+  .give-monthly h3{font-family:var(--display);font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1.15;margin-bottom:16px;letter-spacing:-.02em}
+  .give-monthly p{font-size:15.5px;color:#4A3A12;line-height:1.6;margin-bottom:12px}
+  .give-monthly p b{color:var(--ink);font-weight:700}
+  .give-monthly .btn{background:var(--ink);color:#fff;margin-top:auto;font-size:16px;padding:15px 28px;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)}
+  .give-monthly .btn:hover{background:var(--teal-ink)}
+  .give-once{background:#134A42;border:1px solid rgba(255,255,255,.3);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .give-once h3{font-family:var(--display);font-weight:600;font-size:22px;margin-bottom:14px;color:#fff;letter-spacing:-.01em}
+  .give-once p{font-size:14.5px;color:#EDF6F2;line-height:1.6;margin-bottom:10px}
+  .give-once .btn{border-color:rgba(255,255,255,.7);color:#fff;margin-top:auto}
+  .give-once .btn:hover{background:rgba(255,255,255,.12)}
+  .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:26px}
+  .trust div{background:#134A42;border:1px solid rgba(255,255,255,.28);border-radius:14px;padding:24px 24px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .trust b{display:flex;align-items:center;gap:8px;font-family:var(--display);font-size:15px;font-weight:600;color:#fff;margin-bottom:10px;letter-spacing:-.01em}
+  .trust b::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--yellow);flex:none}
+  .trust p{font-size:13.5px;color:#EDF6F2;line-height:1.55}
+  .trust p a{color:#EAF6F3;text-decoration:underline;text-underline-offset:2px}
+
+  /* ---------- footer ---------- */
+  footer{padding:64px 0 80px;border-top:1px solid var(--line);background:var(--paper-alt)}
+
+  /* ---------- closing brand band (Watsi-style) ---------- */
+  .brandband{background:var(--paper);padding:80px 0;border-top:1px solid var(--line);text-align:center}
+  .brandband .umbrella{
+    width:56px;height:56px;margin:0 auto 24px;border-radius:50%;background:var(--teal);
+    display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(18,165,148,.6);
+  }
+  .brandband .umbrella svg{width:30px;height:30px;display:block}
+  .brandband h2{margin:0 auto 16px;max-width:20ch}
+  .brandband p{font-size:18px;color:var(--ink-soft);max-width:52ch;margin:0 auto 32px}
+  .brandband .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:52px}
+  .ratings{
+    display:flex;gap:34px;justify-content:center;align-items:center;flex-wrap:wrap;
+    padding-top:40px;border-top:1px solid var(--line);max-width:640px;margin:0 auto;
+  }
+  .rating{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted)}
+  .rating .badge{
+    width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    border:2px solid var(--teal);color:var(--teal-deep);
+  }
+  .rating .badge svg{width:26px;height:26px}
+  .rating .stars{color:var(--yellow-deep);font-size:15px;letter-spacing:2px}
+  .rating small{font-size:11.5px;font-weight:600;color:var(--ink-soft);text-align:center;line-height:1.4;letter-spacing:.02em}
+
+  footer h4{font-family:var(--display);font-size:16px;font-weight:600;color:var(--ink);margin-bottom:16px;letter-spacing:-.01em}
+  .sources{font-family:var(--body);font-size:12.5px;color:var(--muted);line-height:1.9;max-width:82ch}
+  .sources a{color:var(--teal-deep)}
+  .disclaimer{
+    margin-top:34px;padding:20px 22px;background:var(--card);border:1px solid var(--line);
+    border-radius:14px;font-size:13.5px;color:var(--ink-soft);max-width:82ch;line-height:1.65;
+  }
+  .disclaimer strong{color:var(--ink)}
+
+  /* ---------- floating CTA ---------- */
+  .float-cta{
+    position:fixed;right:20px;bottom:20px;z-index:60;opacity:0;pointer-events:none;
+    transform:translateY(12px);transition:opacity .3s ease,transform .3s ease;
+  }
+  .float-cta.show{opacity:1;pointer-events:auto;transform:none}
+  .float-cta .btn{box-shadow:0 10px 26px -8px rgba(7,94,84,.55)}
+  .give-monthly .uf-quote{font-style:italic;font-size:15px;border-left:3px solid rgba(0,0,0,.22);padding-left:14px;line-height:1.55;margin:4px 0 20px}
+  .give-monthly .uf-quote span{display:block;font-style:normal;font-size:12px;opacity:.72;margin-top:6px}
+  .hero-patient{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 20px 7px 7px;box-shadow:0 8px 18px -12px rgba(18,49,43,.35)}
+  .hero-patient .avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(160deg,var(--teal),var(--teal-ink));color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:24px;flex:none}
+  .hero-patient .who{font-size:14px;font-weight:600;color:var(--ink);line-height:1.3}
+  .hero-patient .who small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+
+  /* ---------- applicant note banner ---------- */
+  .app-note{background:#fff;border-bottom:3px solid var(--teal);padding:26px 0}
+  .app-note .wrap{max-width:860px}
+  .app-note .an-name{font-family:var(--display);font-weight:700;font-size:19px;color:var(--ink);letter-spacing:-.01em}
+  .app-note .an-meta{font-size:13.5px;color:var(--muted);margin-top:2px}
+  .app-note .an-meta a{color:var(--teal-deep);text-decoration:none}
+  .app-note .an-role{font-family:var(--display);font-weight:600;font-size:13px;color:var(--teal-deep);margin-top:2px}
+  .app-note p{font-size:14.5px;line-height:1.65;color:#2E4741;margin-top:12px}
+
+  /* ---------- print / PDF ---------- */
+  @media print{
+    .topbar{position:static;box-shadow:none}
+    .float-cta{display:none!important}
+    .reveal{opacity:1!important;transform:none!important}
+    .dots span{transform:scale(1)!important;opacity:1!important}
+    section{padding:52px 0}
+    .hero{padding:56px 0 64px}
+    .receipt,.gapcard,.country,.stat,.give-card,.trust div,.pullquote,.rolebox{break-inside:avoid}
+    .act.give{background:#0B3D36!important}
+    .give-once,.trust div{background:#134A42!important}
+    a{text-decoration:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ======================= APPLICANT NOTE ======================= -->
+<div class="app-note">
+  <div class="wrap">
+    <div class="an-name">Lauren Milliken</div>
+    <div class="an-meta"><a href="mailto:lauren@deltaex.com">lauren@deltaex.com</a></div>
+    <div class="an-role">Watsi Community &amp; Engagement Lead Applicant</div>
+    <p>I built a single-page microsite that turns Our World in Data's surgical-access research into a donor journey for Watsi, anchored by five real patients fundraising on watsi.org right now. It features open access public health research, a narrative focused on patients in need of support, as well as calls to action for both individual support and contributing to the Universal Fund. This is an example of the supporter storytelling I want to be able to provide to Watsi every week.</p>
+  </div>
+</div>
+
+<!-- ======================= TOP BAR ======================= -->
+<div class="topbar">
+  <div class="wrap">
+    <a class="wordmark" href="#top">The Surgery <b>Gap</b></a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#problem">Zoom out</a>
+      <a href="#cost">The cost</a>
+      <a href="#proof">It works</a>
+      <a href="#people">The patients</a>
+      <a href="#give">Join in</a>
+    </nav>
+    <a class="btn btn-primary" href="https://watsi.org/universal-fund?utm_source=surgerygap&utm_medium=referral&utm_campaign=topbar" target="_blank" rel="noopener">Donate monthly</a>
+  </div>
+</div>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">A data briefing · Sources: Our World in Data · The Lancet · Watsi</p>
+    <div class="hero-patient">
+      <span class="avatar" aria-hidden="true">S</span>
+      <span class="who">Samalani, 40<small>Driver · Malawi · Hernia repair</small></span>
+    </div>
+    <h1>Samalani is waiting for a <em>$575 surgery</em>.</h1>
+    <p class="sub">He drives for a living in Malawi, supporting his wife and three children. A hernia is making every workday harder. The operation he needs is routine, the hospital is ready, and the date is set. The only thing missing is <b>$575.</b> Samalani is one of billions of people in the same gap, and if you live in a wealthy country, it is a gap you can personally close. Here is the whole picture, and how to help.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#p-samalani">Fund Samalani's surgery</a>
+      <a class="btn btn-ghost" href="#problem">See the whole picture</a>
+      <span class="hero-note">100% of your donation funds life-changing surgery</span>
+    </div>
+
+    <div class="dotfield">
+      <p class="dotfield-label">If the world were 100 people, <b id="dot-count">0</b> of them would face financial catastrophe if they needed surgery. If you can afford to give, you are almost certainly one of the other 53.</p>
+      <div class="dots" id="hero-dots" role="img" aria-label="Dot chart: 47 of 100 dots highlighted, representing the roughly 47 percent of humanity at risk of catastrophic expenditure if they need surgery."></div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= ACT 1: THE PROBLEM ======================= -->
+<section class="act" id="problem">
+  <div class="wrap reveal">
+    <div class="act-head"><span class="act-num">01 / THE PROBLEM</span></div>
+    <p class="eyebrow">Zoom out</p>
+    <h2>A third of the world's disease burden requires surgery.</h2>
+    <p class="lede">Samalani's hernia repair is one of the most common operations in medicine. What is rare, where he lives, is getting one. About a third of the global burden of disease requires surgical or anesthesia care, but the poorest third of the world receives only about 6% of the world's operations. The good news is that this is one of the most fixable problems in global health.</p>
+
+    <div class="propchart">
+      <div class="prop-row">
+        <p class="prop-title">Where the world's people live</p>
+        <div class="prop-bar" aria-label="Over a third of the world's population lives in the poorest countries">
+          <div class="prop-seg seg-poor" data-w="35">35%<small>poorest countries</small></div>
+          <div class="prop-seg seg-rest" data-w="65">65%<small>everyone else</small></div>
+        </div>
+      </div>
+      <div class="prop-row">
+        <p class="prop-title">Where the world's 313 million annual surgeries happen</p>
+        <div class="prop-bar" aria-label="Only about 6 percent of surgeries happen in the poorest countries">
+          <div class="prop-seg seg-poor" data-w="6">6%</div>
+          <div class="prop-seg seg-rest" data-w="94">94%<small>everyone else</small></div>
+        </div>
+        <p class="prop-caption">The poorest third of humanity receives about one in every seventeen operations.</p>
+      </div>
+    </div>
+
+    <div class="statline">
+      <div class="stat"><div class="n"><em>5 billion</em></div><div class="l">people lack access to safe, affordable surgical and anesthesia care when they need it</div></div>
+      <div class="stat"><div class="n">9 in 10</div><div class="l">people in low-income and lower-middle-income countries cannot access basic surgical care</div></div>
+      <div class="stat"><div class="n">143 million</div><div class="l">additional operations are needed in these countries every year to save lives and prevent disability</div></div>
+    </div>
+
+    <p class="source">Source: The Lancet Commission on Global Surgery, <em>Global Surgery 2030</em> (Meara et al., 2015). These indicators are maintained today by Harvard's Program in Global Surgery and Social Change and published via the World Bank and <a href="https://ourworldindata.org" target="_blank" rel="noopener">Our World in Data</a>.</p>
+  </div>
+</section>
+
+<!-- ======================= ACT 2: THE COST ======================= -->
+<section class="act" id="cost">
+  <div class="wrap reveal">
+    <div class="act-head"><span class="act-num">02 / THE COST</span></div>
+    <p class="eyebrow">Financial catastrophe</p>
+    <h2>Paying for surgery pushes 81 million people a year into financial catastrophe.</h2>
+    <p class="lede">For Samalani's family, $575 is not a painful bill. It is an impossible one. Health economists call it catastrophic expenditure: a medical bill that costs more than 10% of a family's income. An estimated <strong>3.7 billion people</strong> would face costs like that if they needed surgery today. The five patients on this page live in the countries where that risk is highest. For perspective: if you earn at least $47,000 a year after tax, you are in the richest 2% of people in the world. Most of us underestimate how much power that gives us to help.</p>
+
+    <div class="country-list">
+        <div class="country">
+          <div class="row"><span>MALAWI</span><b>57%</b></div>
+          <div class="track"><div class="fill" data-w="57"></div></div>
+          <p class="who">Average modeled risk. For the poorest Malawians, it rises to <b>88%</b>. This is <a href="#p-samalani">Samalani</a>'s home.</p>
+        </div>
+        <div class="country">
+          <div class="row"><span>UGANDA</span><b>~80%</b></div>
+          <div class="track"><div class="fill" data-w="80"></div></div>
+          <p class="who">Share at risk of catastrophic or impoverishing surgical costs. This is <a href="#p-innocent">Innocent</a>'s home.</p>
+        </div>
+        <div class="country">
+          <div class="row"><span>ETHIOPIA</span><b>58–71%</b></div>
+          <div class="track"><div class="fill" data-w="65"></div></div>
+          <p class="who">Share of surgical patients in Addis Ababa studies who incurred catastrophic costs. Home to <a href="#p-mekdes">Mekdes</a> and <a href="#p-eyu">Eyu</a>.</p>
+        </div>
+        <div class="country">
+          <div class="row"><span>DISPLACED FROM BURMA</span><b>not covered</b></div>
+          <div class="track"><div class="fill" data-w="100"></div></div>
+          <p class="who"><a href="#p-nwet">Nwet</a> lives in a refugee village on the Thai border. Refugee families are not covered by any national health system, so they pay for care on their own.</p>
+        </div>
+    </div>
+
+    <div class="pullquote">
+      <p>In one Ugandan government hospital, where surgery is officially free, 53% of surgical patients' families borrowed money to pay for care. 21% sold possessions. 17% lost a job.</p>
+      <cite>Anderson et al., PLOS ONE, 2017</cite>
+    </div>
+
+    <p class="source">Sources: Shrime et al., "Catastrophic expenditure to pay for surgery worldwide," <em>The Lancet Global Health</em> (2015) · Our World in Data grapher: share-of-the-population-at-risk-of-catastrophic-expenditure-when-surgical-care-is-required · Bijlmakers et al. (Malawi, 2019) · Anderson et al. (Uganda, 2017) · Ethiopian CHE studies, 2021–2023. Country figures combine modeled national estimates and hospital-based patient surveys; see footer for full citations. Global income percentile: Giving What We Can's "How Rich Am I?" calculator.</p>
+  </div>
+</section>
+
+<!-- ======================= ACT 3: THE GAP ======================= -->
+<section class="act" id="gap">
+  <div class="wrap reveal">
+    <div class="act-head"><span class="act-num">03 / THE GAP</span></div>
+    <p class="eyebrow">The three gaps</p>
+    <h2>Why the cost falls on families.</h2>
+    <p class="lede">In the countries where these five patients live, health systems have very little to spend, most care is paid for in cash, and surgeons are scarce. All three show up clearly in the data.</p>
+
+    <div class="gaps">
+      <div class="gapcard">
+        <h3>The spending gap</h3>
+        <p class="g-sub">Total health spending per person per year (US$, WHO GHED 2022, approx.)</p>
+        <div class="hbar"><div class="hl"><span>United States</span><b>$12,500+</b></div><div class="ht"><div class="hf us" data-w="100"></div></div></div>
+        <div class="hbar"><div class="hl"><span>Myanmar</span><b>~$65</b></div><div class="ht"><div class="hf low" data-w="0.6"></div></div></div>
+        <div class="hbar"><div class="hl"><span>Uganda</span><b>~$45</b></div><div class="ht"><div class="hf low" data-w="0.45"></div></div></div>
+        <div class="hbar"><div class="hl"><span>Malawi</span><b>~$40</b></div><div class="ht"><div class="hf low" data-w="0.4"></div></div></div>
+        <div class="hbar"><div class="hl"><span>Ethiopia</span><b>~$30</b></div><div class="ht"><div class="hf low" data-w="0.35"></div></div></div>
+        <p class="g-fact">Malawi spends less on Samalani's healthcare in <b>a year</b> than the US spends per person in <b>a single day</b>.</p>
+      </div>
+
+      <div class="gapcard">
+        <h3>The out-of-pocket gap</h3>
+        <p class="g-sub">Share of health spending paid in cash by families (WHO GHED 2022)</p>
+        <div class="hbar"><div class="hl"><span>Low-income countries</span><b>~43%</b></div><div class="ht"><div class="hf low" data-w="43"></div></div></div>
+        <div class="hbar"><div class="hl"><span>Lower-middle income</span><b>~36%</b></div><div class="ht"><div class="hf low" data-w="36"></div></div></div>
+        <div class="hbar"><div class="hl"><span>High-income countries</span><b>~18%</b></div><div class="ht"><div class="hf us" data-w="18"></div></div></div>
+        <p class="g-fact">Without insurance, families pay the hospital directly, in cash, at the time of care. The WHO considers the risk of catastrophic spending low only when out-of-pocket payments fall below <b>15–20%</b> of a country's total health spending.</p>
+      </div>
+
+      <div class="gapcard">
+        <h3>The surgeon gap</h3>
+        <p class="g-sub">Surgical, anesthetic &amp; obstetric specialists per 100,000 people</p>
+        <div class="hbar benchline"><div class="hl"><span>Lancet Commission target</span><b>20</b></div><div class="ht"><div class="hf bench" data-w="91"></div></div></div>
+        <div class="hbar"><div class="hl"><span>Typical low-income country</span><b>&lt;2</b></div><div class="ht"><div class="hf low" data-w="7"></div></div></div>
+        <p class="g-fact"><b>Not a single low-income country</b> meets the target of 20 specialists per 100,000. In West Ethiopia, there is no ENT surgeon within roughly <b>800 km</b> of Mekdes's region. A typical patient waits two to three months just to meet one.</p>
+      </div>
+    </div>
+
+    <p class="source">Sources: Our World in Data graphers — annual-healthcare-expenditure-per-capita and share-of-out-of-pocket-expenditure-on-healthcare (WHO Global Health Expenditure Database) · specialist-surgical-workforce-rate (Harvard PGSSC via World Bank) · Lancet Commission on Global Surgery workforce benchmark · Watsi medical-partner treatment notes (Saglan Wajee General Hospital, Ethiopia). Country spending figures rounded; see the interactive charts at ourworldindata.org for exact latest values.</p>
+  </div>
+</section>
+
+<!-- ======================= ACT 4: IT WORKS ======================= -->
+<section class="act" id="proof">
+  <div class="wrap reveal">
+    <div class="act-head"><span class="act-num">04 / IT WORKS</span></div>
+    <p class="eyebrow">Proof</p>
+    <h2>Strangers fund surgeries on Watsi every day.</h2>
+    <p class="lede">Since 2012, more than 34,000 patients in 36 countries have received care funded by people they will never meet. It is happening on this page right now: <strong id="proof-live">donors are funding Nwet's surgery as you read</strong>. And the story does not end at checkout. Every donor receives an update after the patient they supported receives care, so you see how the story ends.</p>
+    <div class="statline">
+      <div class="stat"><div class="n">34,000+</div><div class="l">patients have received life-changing care funded through Watsi</div></div>
+      <div class="stat"><div class="n">$21 million+</div><div class="l">in healthcare funded directly by donors since 2012</div></div>
+      <div class="stat"><div class="n">36</div><div class="l">countries reached through Watsi's medical partners</div></div>
+    </div>
+    <p class="source">Figures: watsi.org, July 2026. Funding progress for the patients on this page is updated manually from their profiles on watsi.org.</p>
+  </div>
+</section>
+
+<!-- ======================= ACT 5: THE PEOPLE ======================= -->
+<section class="act" id="people">
+  <div class="wrap reveal">
+    <div class="act-head"><span class="act-num">05 / THE PATIENTS</span></div>
+    <p class="eyebrow">Meet a patient you can support</p>
+    <h2>Five patients you can support right now.</h2>
+    <p class="lede people-intro">You've seen the data. These five people are living it right now. Each of them sought care at one of Watsi's medical partners and chose to share their story with the world. Watsi publishes an itemized cost for every treatment. These are the actual line items. Very few charities show you this level of detail. <strong>100% of your donation funds life-changing surgery.</strong></p>
+
+    <div class="receipts" id="receipts"><!-- rendered by JS from PATIENTS config --></div>
+    <p class="updated" id="updated-note"></p>
+  </div>
+</section>
+
+<!-- ======================= ACT 5: GIVE ======================= -->
+<section class="act give" id="give">
+  <div class="wrap reveal">
+    <div class="act-head"><span class="act-num" style="color:#BCD6CE">06 / JOIN IN</span></div>
+    <p class="eyebrow">Healthcare for everyone</p>
+    <h2>Directly fund life-changing healthcare for people around the world.</h2>
+    <p class="lede">Watsi is a nonprofit that brings people together through technology to fund life-changing healthcare. Since 2012, its donors have funded more than $21 million in care for over 34,000 patients in 36 countries. <strong>100% of your donation funds care, without a cut — Watsi even covers the processing fees.</strong> And you always receive an update after the patient you support receives care, so you know the impact you've made in their life.</p>
+    <p class="lede">Watsi is named after a small town in Costa Rica. In 2010, on a bus passing through, a woman asked the passengers to help pay for her son's healthcare, and strangers said yes. Everything Watsi has built since is a way of making that moment possible at scale. Joining means becoming one of those strangers.</p>
+
+    <div class="give-grid">
+      <a class="give-card give-monthly" href="https://watsi.org/universal-fund?utm_source=surgerygap&utm_medium=referral&utm_campaign=give_monthly" target="_blank" rel="noopener" style="text-decoration:none">
+        <span class="tag">MOST IMPACT</span>
+        <h3>Your life-changing impact, every month.</h3>
+        <p>New patients join Watsi every week. The <b>Universal Fund</b> is a recurring donation that automatically supports life-changing healthcare for a new patient every month. You'll know exactly where your money goes.</p>
+        <p>Samalani's entire surgery costs <b>$575</b>. Innocent's costs <b>$220</b>. With every donation, you'll receive an email introducing you to the patient you supported, and an update after they receive care.</p>
+        <p class="uf-quote">“I get hit by a total wave of gratitude when I see our monthly patient updates.”<span>Danya and Andrew, Universal Fund members since 2014</span></p>
+        <span class="btn">Join the Universal Fund →</span>
+      </a>
+      <div class="give-card give-once">
+        <h3>Or meet a patient you can support.</h3>
+        <p>Choose any patient above and help fund the exact remaining cost of their care. You'll receive an update after they receive treatment.</p>
+        <p>Every patient on this page was still raising funds when this site was last updated. Your donation could be the one that fully funds their care.</p>
+        <a class="btn btn-ghost" href="#people">Meet the patients above ↑</a>
+        <a class="btn btn-ghost" style="margin-top:10px" href="https://watsi.org/fundable-profile?utm_source=surgerygap&utm_medium=referral&utm_campaign=meet_another" target="_blank" rel="noopener">Meet another patient →</a>
+      </div>
+    </div>
+
+    <div class="trust">
+      <div><b>Unmatched efficiency</b><p>100% of your donation directly funds healthcare, without a cut — Watsi even covers the processing fees.</p></div>
+      <div><b>Radical transparency</b><p>Watsi's financials, including every treatment payout to its medical partners, are publicly available in real time on its <a href="https://watsi.org/transparency" target="_blank" rel="noopener">transparency document</a>.</p></div>
+      <div><b>Direct impact</b><p>You always receive an update after the patient you support receives care, so you know the impact you've made in their life.</p></div>
+      <div><b>Impact you can trust</b><p>Watsi has received the highest independent ratings awarded for accountability and transparency: a GuideStar Platinum Seal and a 4-star Charity Navigator rating.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CLOSING BRAND BAND ======================= -->
+<section class="brandband">
+  <div class="wrap reveal">
+    <div class="umbrella" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2v2M12 12v8a2 2 0 0 0 4 0" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        <path d="M3 12a9 9 0 0 1 18 0c-1.5-1.2-3-1.2-4.5 0-1.5-1.2-3-1.2-4.5 0-1.5-1.2-3-1.2-4.5 0C6 10.8 4.5 10.8 3 12Z" fill="#fff"/>
+      </svg>
+    </div>
+    <h2>Everyone deserves access to healthcare.</h2>
+    <p>A few hundred dollars can feel like a lot. Then you see what it buys: a repaired hernia, a livelihood back, a childhood without pain. Meet a patient you can support today.</p>
+    <div class="cta-row">
+      <a class="btn btn-yellow" href="https://watsi.org/universal-fund?utm_source=surgerygap&utm_medium=referral&utm_campaign=brandband" target="_blank" rel="noopener">Join the Universal Fund</a>
+      <a class="btn btn-ghost" href="#people">Meet a patient</a>
+    </div>
+    <div class="ratings">
+      <div class="rating">
+        <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <small>GuideStar<br>Platinum Seal</small>
+      </div>
+      <div class="rating">
+        <div class="stars" aria-hidden="true">★★★★</div>
+        <small>Charity Navigator<br>4-Star Rating</small>
+      </div>
+      <div class="rating">
+        <div class="badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 8h14M7 21h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5 8 3 13a4 4 0 0 0 8 0L9 8M15 8l-2 5a4 4 0 0 0 8 0l-2-5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <small>100% of donations<br>fund care</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap">
+    <h4>Methodology &amp; sources</h4>
+    <p class="sources">
+      · Meara et al., <em>Global Surgery 2030</em>, The Lancet Commission on Global Surgery (2015) — access, workforce and volume figures<br>
+      · Shrime et al., "Catastrophic expenditure to pay for surgery worldwide: a modelling study," <em>The Lancet Global Health</em> (2015) — 3.7B at risk; 81M/year<br>
+      · <a href="https://ourworldindata.org/grapher/share-of-the-population-at-risk-of-catastrophic-expenditure-when-surgical-care-is-required" target="_blank" rel="noopener">Our World in Data: catastrophic surgical expenditure risk</a> (Harvard PGSSC via World Bank, indicator SH.SGR.CRSK.ZS)<br>
+      · <a href="https://ourworldindata.org/grapher/share-of-out-of-pocket-expenditure-on-healthcare" target="_blank" rel="noopener">Our World in Data: out-of-pocket share of health spending</a> and <a href="https://ourworldindata.org/financing-healthcare" target="_blank" rel="noopener">total health spending per person</a> (WHO Global Health Expenditure Database)<br>
+      · Anderson et al., "Out-of-pocket payment for surgery in Uganda," <em>PLOS ONE</em> (2017) · Bijlmakers et al., Malawi patient survey, <em>Ann Med Surg</em> (2019) · Ethiopian catastrophic-expenditure studies (2021–2023)<br>
+      · Patient stories, photos, cost breakdowns and funding progress: <a href="https://watsi.org" target="_blank" rel="noopener">watsi.org</a>, as published on each linked profile.<br>
+      Our World in Data content is used under CC-BY 4.0 with attribution. Dot-grid and bar charts on this page are recreations of the cited datasets; country risk figures mix modeled national estimates with hospital-based studies, as labeled.
+    </p>
+    <div class="disclaimer">
+      <strong>About this site.</strong> The Surgery Gap is an independent editorial project and is not an official Watsi property. All donations are made directly on watsi.org, where Watsi — a 501(c)(3) nonprofit, EIN 45-3236734 — processes them. Patient information appears exactly as published by Watsi with patient consent; funding progress is updated manually and may lag the live figures on watsi.org.
+    </div>
+  </div>
+</footer>
+
+<!-- ======================= FLOATING CTA ======================= -->
+<div class="float-cta" id="float-cta">
+  <a class="btn btn-primary" href="https://watsi.org/universal-fund?utm_source=surgerygap&utm_medium=referral&utm_campaign=floating" target="_blank" rel="noopener">Donate monthly on Watsi →</a>
+</div>
+
+<script>
+/* =====================================================================
+   MANUAL UPDATE ZONE — funding progress
+   ---------------------------------------------------------------------
+   To refresh funding numbers: open each watsi.org profile, copy the
+   current "raised" figure and donor count into the matching entry
+   below, and update LAST_UPDATED. Set funded:true when a patient is
+   fully funded (their card will switch to a "Funded" state and point
+   visitors to another patient). Everything else re-renders itself.
+
+   PHOTOS — before launch: the photo URLs below point at each patient's
+   live profile image on Watsi's CDN. Hotlinking is fragile and impolite
+   for a partner project, so download the five approved photos, drop them
+   next to this file (e.g. /img/samalani.jpg), and change each "photo:"
+   to that local path. If any image fails to load, the card automatically
+   falls back to a branded teal tile with the patient's initial.
+   ===================================================================== */
+const LAST_UPDATED = "July 8, 2026";
+
+const PATIENTS = [
+  {
+    id:"samalani", name:"Samalani", age:40, country:"Malawi",
+    treatment:"Hernia repair", goal:575, raised:20, donors:1, funded:false,
+    photo:"https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/35780/profile_638x479_81731023-2390-45fc-835c-6a67181ef2e7.jpg",
+    url:"https://watsi.org/profile/63c156dc3cdb-samalani",
+    story:"Samalani is a driver from Malawi. He is married with three children and works hard to provide for his family. A hernia diagnosed in 2024 now causes pain that makes his work difficult. Fortunately, Watsi's medical partner, African Mission Healthcare, can help. Surgery is scheduled at Partners in Hope Medical Center, and he needs help to fund the procedure.",
+    quote:"Surgery will provide me the opportunity for a healthier life.",
+    quoteBy:"— SAMALANI",
+    datafact:"In Malawi, the modeled risk of catastrophic surgical costs is <b>57%</b>. For the poorest families, it is <b>88%</b>.",
+    ledger:[["Hospital fees",122],["Medical staff",251],["Supplies",102],["Other",78],["Labs",19],["Medication",3]]
+  },
+  {
+    id:"mekdes", name:"Mekdes", age:22, country:"Ethiopia",
+    treatment:"Tonsillectomy", goal:700, raised:209, donors:5, funded:false,
+    photo:"https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/36240/profile_638x479_47a1a50b-c91b-4baa-a2d9-97d62d1e6a5a.jpg",
+    url:"https://watsi.org/profile/ce502798b0a6-mekdes",
+    story:"Mekdes is a young single mother and the heart and soul of her small family. She sells fried chips from a street-side stall, which is their only source of income. For four years, chronic tonsillitis has kept her from working. Watsi's medical partner, Saglan Wajee General Hospital, is requesting funds for a tonsillectomy that will help her live and work more comfortably.",
+    quote:"My deepest hope is to finally achieve lasting health and financial security.",
+    quoteBy:"— MEKDES",
+    datafact:"There is no ENT surgeon within roughly <b>800 km</b> of her region of West Ethiopia. A typical patient waits 2–3 months just to meet one.",
+    ledger:[["Medical staff",355],["Medication",155],["Hospital fees",100],["Labs",90]]
+  },
+  {
+    id:"nwet", name:"Nwet", age:41, country:"Burma",
+    treatment:"Thyroidectomy", goal:1500, raised:924, donors:36, funded:false,
+    photo:"https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/35301/profile_638x479_40bb0df2-6747-4a63-859e-8f2d9a7ebdb0.jpg",
+    url:"https://watsi.org/profile/71c81221669e-nwet",
+    story:"Nwet is a mother of three who lives with her husband in a refugee village on the Thai border, where they work as agricultural laborers. She was diagnosed with a thyroid goiter and needs surgery to keep her symptoms from getting worse. Watsi's medical partner, Burma Children Medical Fund, is helping Nwet receive treatment at Mae Sot General Hospital. She and her family need help raising the money.",
+    quote:"By ourselves, we cannot afford this. Thank you from the bottom of my heart.",
+    quoteBy:"— NWET'S HUSBAND",
+    datafact:"Refugee families are not covered by any national health system. Watsi's medical partner reaches patients no government program does.",
+    ledger:[["Medical staff",1271],["Hospital fees",1153],["Supplies",853],["Radiology",510],["Other",131]],
+    ledgerNote:"Full cost ≈ $3,972 · Watsi raises $1,500; partner contributions cover the rest"
+  },
+  {
+    id:"eyu", name:"Eyu", age:8, country:"Ethiopia",
+    treatment:"Corrective surgery (orchidopexy)", goal:754, raised:216, donors:8, funded:false,
+    photo:"https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/36190/profile_638x479_ef812beb-80d8-4715-82c5-7bf4c4dadafc.jpg",
+    url:"https://watsi.org/profile/f52dead6e32e-eyu",
+    story:"Eyu is a calm and sociable eight-year-old boy who is talented in football and dreams of one day becoming a priest. He was diagnosed at age two and has waited six years for corrective surgery, which will reduce his risk of hernias, cancer, and fertility problems later in life. Fortunately, Watsi's medical partner, African Mission Healthcare, can help, and is requesting funds to cover the cost of his care.",
+    quote:"I thank God for the support we are getting for our son's surgery.",
+    quoteBy:"— EYU'S FATHER",
+    datafact:"The Lancet Commission estimates <b>143 million</b> needed operations go unperformed every year. Eyu has waited six years for this one.",
+    ledger:[["Hospital fees",458],["Medical staff",132],["Supplies",87],["Other",36],["Radiology",16],["Medication",15],["Labs",10]]
+  },
+  {
+    id:"innocent", name:"Innocent", age:1, country:"Uganda",
+    treatment:"Corrective surgery (orchidopexy)", goal:220, raised:60, donors:3, funded:false,
+    photo:"https://d3w52z135jkm97.cloudfront.net/uploads/profile/photo/36340/profile_638x479_f1297eba-37f9-456c-aa24-037a80f1ca1d.jpg",
+    url:"https://watsi.org/profile/de536163c164-innocent",
+    story:"Innocent is a cheerful one-year-old boy. When he is feeling well, he rarely spends a moment without expressing his happiness. His parents are small-scale farmers doing their best despite financial challenges. Surgery at Rushoroza Hospital will allow him to grow up healthier, and Watsi's medical partner, African Mission Healthcare, is requesting funds for the procedure.",
+    quote:"I pray to God that my son will get the support he needs.",
+    quoteBy:"— INNOCENT'S MOTHER",
+    datafact:"In Uganda, <b>~80%</b> of people risk catastrophic surgical costs; in one study, 53% of families borrowed and 21% sold possessions to pay for surgery.",
+    ledger:[["Hospital fees",104],["Supplies",53],["Medication",33],["Medical staff",15],["Other",11],["Labs",4]]
+  }
+];
+
+/* ---------- render patient receipts ---------- */
+const fmt = n => "$" + n.toLocaleString("en-US");
+const receiptsEl = document.getElementById("receipts");
+
+PATIENTS.forEach(p => {
+  const pct = Math.min(100, Math.round(p.raised / p.goal * 100));
+  const togo = Math.max(0, p.goal - p.raised);
+  const utm = "?utm_source=surgerygap&utm_medium=referral&utm_campaign=patient_" + p.id;
+  const card = document.createElement("article");
+  card.className = "receipt";
+  card.id = "p-" + p.id;
+  card.innerHTML = `
+    <div class="photo">
+      <div class="fallback" aria-hidden="true">${p.name[0]}</div>
+      <img src="${p.photo}" alt="Portrait of ${p.name}, published on their Watsi profile"
+           loading="lazy" onerror="this.remove()">
+    </div>
+    <div class="body">
+      <div class="r-head">
+        <span class="r-name">${p.name}</span>
+        <span class="r-meta">${p.age} · ${p.country}<br>${p.treatment}</span>
+      </div>
+      <p class="r-story">${p.story}</p>
+      <p class="r-quote">“${p.quote}”<span>${p.quoteBy}</span></p>
+      <p class="r-datafact">${p.datafact}</p>
+      <div class="ledger" aria-label="Itemized cost of ${p.name}'s treatment">
+        ${p.ledger.map(([item,amt]) =>
+          `<div class="li"><span>${item}</span><span class="dots-lead"></span><span class="amt">${fmt(amt)}</span></div>`
+        ).join("")}
+        <div class="total"><span>${p.ledgerNote ? "Watsi raises" : "Total cost of care"}</span><span>${fmt(p.goal)}</span></div>
+        ${p.ledgerNote ? `<div style="font-size:11px;color:var(--muted);margin-top:6px">${p.ledgerNote}</div>` : ""}
+      </div>
+      <div class="r-progress">
+        <div class="pl"><span class="raised">${fmt(p.raised)} raised</span><span class="togo">${p.funded ? "fully funded" : fmt(togo)+" to go"}</span></div>
+        <div class="pt"><div class="pf" data-w="${pct}"></div></div>
+      </div>
+      <span class="r-stamp ${p.funded ? "funded" : ""}">${p.funded ? "✓ FULLY FUNDED" : "AWAITING FUNDING"}</span>
+      ${p.funded
+        ? `<a class="btn btn-ghost" href="https://watsi.org/fundable-profile?utm_source=surgerygap&utm_medium=referral&utm_campaign=funded_fallback" target="_blank" rel="noopener">Fully funded! Meet another patient →</a>`
+        : `<a class="btn btn-primary" href="${p.url + utm}" target="_blank" rel="noopener">Fund ${p.name}'s surgery →</a>`}
+      <p class="r-donors">Funded by ${p.donors} donor${p.donors === 1 ? "" : "s"} so far · 100% of your donation funds ${p.name}'s care</p>
+    </div>`;
+  receiptsEl.appendChild(card);
+});
+
+document.getElementById("updated-note").textContent =
+  "Funding progress last updated " + LAST_UPDATED + " from each patient's profile on watsi.org. Live totals may be higher. Check each patient's profile for the latest.";
+
+/* force every reveal + bar + dot to final state (used before print/PDF) */
+function forceRevealAll(){
+  document.querySelectorAll(".reveal").forEach(el => {
+    el.classList.add("in");
+    el.querySelectorAll("[data-w]").forEach(b => b.style.width = b.dataset.w + "%");
+  });
+  document.querySelectorAll(".r-progress .pf[data-w]").forEach(b => b.style.width = b.dataset.w + "%");
+  const hd = document.getElementById("hero-dots");
+  if (hd) hd.classList.add("lit");
+  const dc = document.getElementById("dot-count");
+  if (dc) dc.textContent = "47";
+}
+window.addEventListener("beforeprint", forceRevealAll);
+window.__forceReveal = forceRevealAll;
+
+/* proof section pulls live numbers from the PATIENTS config */
+const nwetP = PATIENTS.find(p => p.id === "nwet");
+const proofLive = document.getElementById("proof-live");
+if (proofLive && nwetP) {
+  proofLive.textContent = nwetP.funded
+    ? "donors just fully funded Nwet's surgery"
+    : nwetP.donors + " donors have already given " + fmt(nwetP.raised) + " toward Nwet's " + fmt(nwetP.goal) + " surgery";
+}
+
+/* ---------- dot fields (hero + act 2) ---------- */
+function buildDots(el, total, risk, cls){
+  const idx = [...Array(total).keys()];
+  // deterministic scatter of risk dots for a stable, honest picture
+  let seed = 42;
+  const rand = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  const shuffled = idx.slice().sort(() => rand() - 0.5).slice(0, risk);
+  const riskSet = new Set(shuffled);
+  idx.forEach(i => {
+    const s = document.createElement("span");
+    if (riskSet.has(i)) s.classList.add("risk");
+    el.appendChild(s);
+  });
+}
+buildDots(document.getElementById("hero-dots"), 100, 47);
+
+/* ---------- scroll-triggered reveals & bar animations ---------- */
+const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add("in");
+    e.target.querySelectorAll("[data-w]").forEach(b => { b.style.width = b.dataset.w + "%"; });
+    io.unobserve(e.target);
+  });
+}, { threshold: 0.18 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+if (reduced) document.querySelectorAll(".reveal").forEach(el => {
+  el.classList.add("in");
+  el.querySelectorAll("[data-w]").forEach(b => b.style.width = b.dataset.w + "%");
+});
+
+/* hero dots: light up + counter */
+const heroDots = document.getElementById("hero-dots");
+const counter = document.getElementById("dot-count");
+const lightHero = () => {
+  heroDots.classList.add("lit");
+  if (reduced) { counter.textContent = "47"; return; }
+  let n = 0;
+  const t = setInterval(() => {
+    counter.textContent = ++n;
+    if (n >= 47) clearInterval(t);
+  }, 28);
+};
+if (reduced) lightHero();
+else {
+  const heroIO = new IntersectionObserver(es => {
+    if (es[0].isIntersecting) { lightHero(); heroIO.disconnect(); }
+  }, { threshold: 0.4 });
+  heroIO.observe(heroDots);
+}
+
+/* ---------- floating CTA after 25% scroll, hidden over #give ---------- */
+const floatCta = document.getElementById("float-cta");
+const giveSection = document.getElementById("give");
+window.addEventListener("scroll", () => {
+  const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+  const giveTop = giveSection.getBoundingClientRect().top;
+  const overGive = giveTop < window.innerHeight && giveSection.getBoundingClientRect().bottom > 0;
+  floatCta.classList.toggle("show", scrolled > 0.25 && !overGive);
+}, { passive: true });
+</script>
+</body>
+</html>
